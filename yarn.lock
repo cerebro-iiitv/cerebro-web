@@ -1957,6 +1957,10 @@ detect-port-alt@1.1.5:
     address "^1.0.1"
     debug "^2.6.0"
 
+dialog-polyfill@^0.4.7:
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/dialog-polyfill/-/dialog-polyfill-0.4.9.tgz#c690b3727c3d82e0f947bd5b910b32af8a2ef57d"
+
 diff@^3.2.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.4.0.tgz#b1d85507daf3964828de54b37d0d73ba67dda56c"
@@ -2702,7 +2706,7 @@ find-up@^2.0.0, find-up@^2.1.0:
   dependencies:
     locate-path "^2.0.0"
 
-firebase@^4.10.0:
+firebase@^4.10.0, firebase@^4.3.1:
   version "4.10.0"
   resolved "https://registry.yarnpkg.com/firebase/-/firebase-4.10.0.tgz#52cfcd635ba3f97e4bc2e2c88581e8ad97c2c19a"
   dependencies:
@@ -2715,6 +2719,13 @@ firebase@^4.10.0:
     "@firebase/storage" "0.1.7"
     dom-storage "^2.0.2"
     xmlhttprequest "^1.8.0"
+
+firebaseui@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/firebaseui/-/firebaseui-2.6.1.tgz#f072092422b5d4cd064c55f0baae114dd32d7c21"
+  dependencies:
+    dialog-polyfill "^0.4.7"
+    firebase "^4.3.1"
 
 first-chunk-stream@^1.0.0:
   version "1.0.0"

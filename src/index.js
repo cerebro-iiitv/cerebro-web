@@ -4,10 +4,11 @@ import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 import Icons from 'uikit/dist/js/uikit-icons';
 import UIKit from 'uikit';
-import {firebase} from 'firebase';
+import * as firebase from 'firebase';
 
 import registerServiceWorker from './registerServiceWorker';
 import {getStore} from "./store";
+import Root from './components';
 
 // UIKit
 UIKit.use(Icons);
@@ -29,7 +30,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <div>
-        Hello World!
+        <Root/>
       </div>
     </BrowserRouter>
   </Provider>,
