@@ -9,6 +9,7 @@ import * as firebase from 'firebase';
 import registerServiceWorker from './registerServiceWorker';
 import {getStore} from "./store";
 import Root from './components';
+import 'uikit/dist/css/uikit.min.css'
 
 // UIKit
 UIKit.use(Icons);
