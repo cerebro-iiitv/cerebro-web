@@ -14,6 +14,7 @@ class Team extends Component {
 						<div class="uk-card-body">
 							<h3 class="uk-card-title">{person.name}</h3>
 							<p>{person.desc}</p>
+							<h5>Contact: {person.contact}</h5>
 						</div>
 					</div>
 				))}
