@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import Icons from 'uikit/dist/js/uikit-icons';
 import UIKit from 'uikit';
 import * as firebase from 'firebase';
@@ -9,7 +9,9 @@ import * as firebase from 'firebase';
 import registerServiceWorker from './registerServiceWorker';
 import {getStore} from "./store";
 import Root from './components';
+import Team from './components/Team';
 import 'uikit/dist/css/uikit.min.css'
+import './css/index.css';
 
 // UIKit
 UIKit.use(Icons);
@@ -31,7 +33,8 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <div>
-        <Root/>
+        <Route exact path='/' component={Root} />
+        <Route exact path='/team' component={Team} />
       </div>
     </BrowserRouter>
   </Provider>,

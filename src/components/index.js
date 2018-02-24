@@ -5,7 +5,6 @@ import * as firebase from "firebase";
 import Header from './header';
 import Countdown from './Countdown';
 import {signedIn, signedOut} from "../actions/authActions";
-import '../css/index.css'
 
 class Root extends React.Component {
   componentDidMount() {
