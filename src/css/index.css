@@ -1,5 +1,19 @@
 body {
-	height: 100vh;
-	width: 100vw;
 	background: black;
+}
+
+.timer {
+	display: flex;
+}
+
+.countdown {
+	display: flex;
+	height: 85vh;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.countdown-timer {
+	align-items: flex-start;
 }
