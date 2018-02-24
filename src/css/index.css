@@ -18,3 +18,13 @@ body {
 .countdown-timer {
 	align-items: flex-start;
 }
+
+.team {
+	display: flex;
+	justify-content: space-around;
+}
+
+.team-card {
+	width: 300px;
+	background-color: #1e87f0;
+}
