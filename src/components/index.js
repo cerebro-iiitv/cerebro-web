@@ -4,6 +4,7 @@ import * as firebase from "firebase";
 
 import Header from './header';
 import Countdown from './Countdown';
+import Event from './Event';
 import {signedIn, signedOut} from "../actions/authActions";
 
 class Root extends React.Component {
@@ -21,6 +22,7 @@ class Root extends React.Component {
     return <div>
       <Header/>
       <Countdown />
+      <Event />
     </div>
   }
 }
