@@ -1,13 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-class Root extends React.Component {
+import Countdown from './Countdown';
+import Event from './Event';
 
+class Home extends React.Component {
   render() {
     return <div>
-      This is index route
+      <Countdown/>
+      <Event/>
     </div>
   }
 }
 
-export default connect()(Root);
+export default connect()(Home);
