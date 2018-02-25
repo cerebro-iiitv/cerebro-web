@@ -11,8 +11,8 @@ class Team extends Component {
 					<div className="blog-card spring-fever">
 						<div className="title-content">
 							<h3>{ person.name }</h3>
-							<h4>Contact: { person.contact }</h4>
 							<hr className="divider" />
+							<h4>Contact: { person.contact }</h4>
 							<div className="intro">{ person.desc }</div>
 						</div>
 					</div>
