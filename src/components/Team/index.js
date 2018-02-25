@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 
 import team from '../../data/team';
+import '../../css/team.css'
 
 class Team extends Component {
 	render() {
 		return(
-			<div className="team">
+			<div className="team container">
 				{team.map( person => (
-					<div class="uk-card uk-card-default team-card">
-						<div class="uk-card-media-top">
-							<img src={person.img} alt="person.name" />
-						</div>
-						<div class="uk-card-body">
-							<h3 class="uk-card-title">{person.name}</h3>
-							<p>{person.desc}</p>
-							<h5>Contact: {person.contact}</h5>
+					<div className="blog-card spring-fever">
+						<div className="title-content">
+							<h3>{ person.name }</h3>
+							<hr className="divider" />
+							<h4>Contact: { person.contact }</h4>
+							<div className="intro">{ person.desc }</div>
 						</div>
 					</div>
 				))}
