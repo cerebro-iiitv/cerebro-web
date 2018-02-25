@@ -19,12 +19,12 @@ UIKit.use(Icons);
 
 // Firebase
 firebase.initializeApp({
-  apiKey: "AIzaSyDtC9Ob9VE2e5fVOrTD3a0khcBo2rRY8jM",
-  authDomain: "cerebro-iiitv-2018.firebaseapp.com",
-  databaseURL: "https://cerebro-iiitv-2018.firebaseio.com",
-  projectId: "cerebro-iiitv-2018",
-  storageBucket: "cerebro-iiitv-2018.appspot.com",
-  messagingSenderId: "765373525937"
+  apiKey: "AIzaSyB22-DZ_PvhTJsA-PPf8Vs--fmcCixL-YQ",
+  authDomain: "cerebro-2018-f1052.firebaseapp.com",
+  databaseURL: "https://cerebro-2018-f1052.firebaseio.com",
+  projectId: "cerebro-2018-f1052",
+  storageBucket: "cerebro-2018-f1052.appspot.com",
+  messagingSenderId: "1059299836137"
 });
 
 // Store
