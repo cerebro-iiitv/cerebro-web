@@ -24,7 +24,8 @@ class Dashboard extends React.Component {
         </ul>
       </div>
       <div>
-        <input type={'phone'} value={this.props.userPhone} id={'phone-input'} placeholder={'Mobile'}/>
+        <p><b>Current mobile number: </b>{this.props.userPhone}</p>
+        <input type={'phone'} id={'phone-input'} placeholder={'Mobile'}/>
         <button onClick={() => {this.props.saveUserPhone(document.getElementById('phone-input').value)}}>Save</button>
       </div>
       <button onClick={() => firebase.auth().signOut()}>Sign out</button>
