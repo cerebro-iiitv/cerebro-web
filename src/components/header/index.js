@@ -21,6 +21,12 @@ class Header extends React.Component {
     // Manage event details
     firebase.database().ref('/events/').on('value', snapshot => {
       let value = snapshot.val();
+      value = value.map(event => {
+        if (!event.participants) {
+          event.participants = {};
+        }
+        return event;
+      });
       this.props.loadEvents(value);
     });
   }

@@ -11,7 +11,7 @@ class Event extends React.Component {
       return <div>Loading</div>
     }
     let event = this.props.event.events[eventId];
-    let isRegistered = this.props.user && _.some(Object.keys(event.participants), i => i === this.props.user.uid);
+    let isRegistered = event.participants && this.props.user && _.some(Object.keys(event.participants), i => i === this.props.user.uid);
     /**
      * event can now be used to render everything here. We can know if
      * the user has already registered to the event and display the
