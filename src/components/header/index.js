@@ -6,6 +6,7 @@ import * as firebase from "firebase";
 import SignIn from '../signIn';
 import {signedIn, signedOut} from "../../actions/authActions";
 import {loadEvents} from "../../actions/eventActions";
+import {loadUserPhone} from "../../actions/userPhoneReducer";
 
 class Header extends React.Component {
 
@@ -23,6 +24,7 @@ class Header extends React.Component {
           }
         });
         this.props.signedIn(user);
+        this.props.loadUserPhone();
       } else {
         this.props.signedOut();
       }
@@ -69,5 +71,5 @@ const mapStateToProps = state => {
 };
 
 export default withRouter(connect(mapStateToProps, {
-  signedIn, signedOut, loadEvents
+  signedIn, signedOut, loadEvents, loadUserPhone
 })(Header));
