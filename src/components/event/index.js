@@ -36,9 +36,9 @@ class Event extends React.Component {
         </ul>
       </div>
       <div><b>Team size</b>: {event['team-size']}</div>
-      <div><button
+      <div>{this.props.user ? <button
         onClick={() => isRegistered ? this.props.unregisterFromEvent(event) : this.props.registerToEvent(event)}>
-        {isRegistered ? 'Unregister' : 'Register'}</button></div>
+        {isRegistered ? 'Unregister' : 'Register'}</button> : 'Please log in to register!'}</div>
     </div>
   }
 }
@@ -46,7 +46,7 @@ class Event extends React.Component {
 const mapStateToProps = state => {
   return {
     event: state.event,
-    user: state.auth.user
+    user: state.auth.user,
   }
 };
 
