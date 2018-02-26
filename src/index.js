@@ -17,6 +17,7 @@ import Header from './components/header';
 import Team from './components/Team';
 import Dashboard from './components/dashboard';
 import Event from './components/event';
+import Timeline from './components/timeline';
 
 // UIKit
 UIKit.use(Icons);
@@ -48,7 +49,7 @@ ReactDOM.render(
               return <Redirect to={'/'}/>
             }
           }}/>
-          <Route exact path={'/timeline'} render={() => <div>Timeline will render here.</div>}/>
+          <Route exact path={'/timeline'} component={Timeline}/>
           <Route exact path={'/contact'} render={() => <div>Contact information will render here.</div>}/>
           <Route exact path={'/sponsors'} render={() => <div>Sponsors will render here.</div>}/>
           <Route exact path={'/events/:id'} component={Event}/>
