@@ -8,11 +8,12 @@ import * as firebase from 'firebase';
 
 import registerServiceWorker from './registerServiceWorker';
 import {getStore} from "./store";
+import 'uikit/dist/css/uikit.min.css'
+import './css/index.css';
 import Root from './components';
 import Header from './components/header';
 import Team from './components/Team';
-import 'uikit/dist/css/uikit.min.css'
-import './css/index.css';
+import Dashboard from './components/dashboard';
 
 // UIKit
 UIKit.use(Icons);
@@ -37,7 +38,7 @@ ReactDOM.render(
         <Header/>
         <Switch>
           <Route exact path='/' component={Root}/>
-          <Route exact path={'/dashboard'} render={() => <div>User dashboard will render here.</div>}/>
+          <Route exact path={'/dashboard'} component={Dashboard}/>
           <Route exact path={'/timeline'} render={() => <div>Timeline will render here.</div>}/>
           <Route exact path={'/contact'} render={() => <div>Contact information will render here.</div>}/>
           <Route exact path={'/sponsors'} render={() => <div>Sponsors will render here.</div>}/>

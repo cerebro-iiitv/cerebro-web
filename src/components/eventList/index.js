@@ -2,32 +2,15 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import '../../css/Event.css';
-import {loadEvents} from "../../actions/eventActions";
+import Panel from "../Panel";
 // import Selectors from '../Selectors';
-// import Panel from '../Panel';
 
 class EventList extends React.Component {
-
-  componentDidMount() {
-    this.props.loadEvents();
-  }
-
-  changeActive(id) {
-    this.setState({
-      activeID: id,
-      wrapperStyle: {
-        backgroundImage: `url('${this.props.event.events[id].img}')`
-      },
-      panelStyle: {
-        backgroundColor: this.props.event.events[id].colour
-      }
-    })
-  }
 
   render() {
     return (
       <div>
-        {this.props.event.events.map(event => <div key={event.id}>{event.header}</div>)}
+        {this.props.event.events.map((event, idx) => <Panel key={idx} event={event} />)}
         {/*<section className="wrapper events" style={this.state.wrapperStyle}>*/}
         {/*<Selectors events={this.props.event.events} activeID={this.state.activeID} handleChangeActive={this.changeActive}/>*/}
         {/*<Panel event={this.props.event.events[this.state.activeID]} panelStyle={this.state.panelStyle}/>*/}
@@ -43,6 +26,4 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps, {
-  loadEvents
-})(EventList);
+export default connect(mapStateToProps)(EventList);

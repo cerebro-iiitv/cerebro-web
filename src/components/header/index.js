@@ -5,16 +5,23 @@ import * as firebase from "firebase";
 
 import SignIn from '../signIn';
 import {signedIn, signedOut} from "../../actions/authActions";
+import {loadEvents} from "../../actions/eventActions";
 
 class Header extends React.Component {
 
   componentDidMount() {
+    // Manage firebase OAuth
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.props.signedIn(user);
       } else {
         this.props.signedOut();
       }
+    });
+    // Manage event details
+    firebase.database().ref('/events/').on('value', snapshot => {
+      let value = snapshot.val();
+      this.props.loadEvents(value);
     });
   }
 
@@ -47,5 +54,5 @@ const mapStateToProps = state => {
 };
 
 export default withRouter(connect(mapStateToProps, {
-  signedIn, signedOut
+  signedIn, signedOut, loadEvents
 })(Header));
