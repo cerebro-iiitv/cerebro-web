@@ -12,6 +12,9 @@ export const loadEvents = events => dispatch => dispatch({type: actionTypes.LOAD
 
 export const registerToEvent = event => dispatch => {
   let user = getState().auth.user;
+  if (!user) {
+    return;
+  }
   firebase.database().ref('/events/' + event.id + '/participants/' + user.uid).set({
     'name': user.displayName,
     'uid': user.uid
@@ -20,6 +23,9 @@ export const registerToEvent = event => dispatch => {
 
 export const unregisterFromEvent = event => dispatch => {
   let user = getState().auth.user;
+  if (!user) {
+    return;
+  }
   firebase.database().ref('/events/' + event.id + '/participants/' + user.uid).remove(
     res => dispatch({type: actionTypes.EVENT_UNREGISTERED, event}));
 };
