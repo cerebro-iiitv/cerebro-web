@@ -6,7 +6,7 @@ import {loadEvents} from "../../actions/eventActions";
 // import Selectors from '../Selectors';
 // import Panel from '../Panel';
 
-class Event extends React.Component {
+class EventList extends React.Component {
 
   componentDidMount() {
     this.props.loadEvents();
@@ -25,7 +25,6 @@ class Event extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         {this.props.event.events.map(event => <div key={event.id}>{event.header}</div>)}
@@ -46,4 +45,4 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, {
   loadEvents
-})(Event);
+})(EventList);

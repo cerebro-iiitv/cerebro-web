@@ -2,13 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Countdown from './Countdown';
-import Event from './Event';
+import EventList from './eventList';
 
 class Home extends React.Component {
   render() {
     return <div>
       <Countdown/>
-      <Event/>
+      <EventList/>
     </div>
   }
 }
