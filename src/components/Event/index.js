@@ -1,46 +1,49 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import '../../css/Event.css';
-import events from '../../data/events';
-import Selectors from '../Selectors';
-import Panel from '../Panel';
+import {loadEvents} from "../../actions/eventActions";
+// import Selectors from '../Selectors';
+// import Panel from '../Panel';
+
 class Event extends React.Component {
 
-  constructor(props){
-    super(props);
-    this.state = {
-      activeID : 0,
-      wrapperStyle:{
-        backgroundImage: `url('${events[0].img}')`
-      },
-
-      panelStyle : {background : events[0].colour}
-    }
-
-    this.changeActive = this.changeActive.bind(this);
+  componentDidMount() {
+    this.props.loadEvents();
   }
 
   changeActive(id) {
     this.setState({
       activeID: id,
       wrapperStyle: {
-        backgroundImage: `url('${events[id].img}')`
+        backgroundImage: `url('${this.props.event.events[id].img}')`
       },
       panelStyle: {
-        backgroundColor: events[id].colour
+        backgroundColor: this.props.event.events[id].colour
       }
     })
   }
 
   render() {
+    console.log(this.props);
     return (
-      <section className="wrapper events" style={this.state.wrapperStyle}>
-        <Selectors events={events} activeID={this.state.activeID} handleChangeActive={this.changeActive}/>
-        <Panel event={events[this.state.activeID]} panelStyle={this.state.panelStyle}/>
-      </section>
+      <div>
+        {this.props.event.events.map(event => <div key={event.id}>{event.header}</div>)}
+        {/*<section className="wrapper events" style={this.state.wrapperStyle}>*/}
+        {/*<Selectors events={this.props.event.events} activeID={this.state.activeID} handleChangeActive={this.changeActive}/>*/}
+        {/*<Panel event={this.props.event.events[this.state.activeID]} panelStyle={this.state.panelStyle}/>*/}
+        {/*</section>*/}
+      </div>
     );
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    event: state.event
+  }
+};
 
-export default Event;
+export default connect(mapStateToProps, {
+  loadEvents
+})(Event);
