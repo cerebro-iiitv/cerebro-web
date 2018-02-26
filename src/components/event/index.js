@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 
+import {registerToEvent, unregisterFromEvent} from "../../actions/eventActions";
+
 class Event extends React.Component {
   render() {
     let eventId = this.props.match.params.id;
@@ -34,7 +36,9 @@ class Event extends React.Component {
         </ul>
       </div>
       <div><b>Team size</b>: {event['team-size']}</div>
-      <div><button>{isRegistered ? 'Unregister' : 'Register'}</button></div>
+      <div><button
+        onClick={() => isRegistered ? this.props.unregisterFromEvent(event) : this.props.registerToEvent(event)}>
+        {isRegistered ? 'Unregister' : 'Register'}</button></div>
     </div>
   }
 }
@@ -46,4 +50,6 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps)(Event);
+export default connect(mapStateToProps, {
+  registerToEvent, unregisterFromEvent
+})(Event);

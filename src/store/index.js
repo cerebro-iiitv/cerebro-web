@@ -14,5 +14,5 @@ export const getStore = () => {
 };
 
 export const getState = () => {
-  getStore().getState();
+  return getStore().getState();
 };

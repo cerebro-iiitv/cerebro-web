@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 
+import {unregisterFromEvent} from "../../actions/eventActions";
+
 class Dashboard extends React.Component {
   render() {
     let userRegisteredEvents = this.props.events.filter(
@@ -11,7 +13,8 @@ class Dashboard extends React.Component {
       <div>Welcome {this.props.user ? this.props.user.displayName : 'human'}.</div>
       <div>
         <ul>
-          {userRegisteredEvents.map(event => <li key={event.id}>{event.name}</li>)}
+          {userRegisteredEvents.map(event => <li key={event.id}>
+            {event.name} <button onClick={() => this.props.unregisterFromEvent(event)}>Unregister</button></li>)}
         </ul>
       </div>
     </div>
@@ -25,4 +28,6 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps)(Dashboard);
+export default connect(mapStateToProps, {
+  unregisterFromEvent
+})(Dashboard);
