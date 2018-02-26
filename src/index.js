@@ -14,6 +14,7 @@ import Root from './components';
 import Header from './components/header';
 import Team from './components/Team';
 import Dashboard from './components/dashboard';
+import Event from './components/event';
 
 // UIKit
 UIKit.use(Icons);
@@ -42,7 +43,7 @@ ReactDOM.render(
           <Route exact path={'/timeline'} render={() => <div>Timeline will render here.</div>}/>
           <Route exact path={'/contact'} render={() => <div>Contact information will render here.</div>}/>
           <Route exact path={'/sponsors'} render={() => <div>Sponsors will render here.</div>}/>
-          <Route exact path={'/events/:id'} render={() => <div>Individual events will render here.</div>}/>
+          <Route exact path={'/events/:id'} component={Event}/>
           <Route exact path={'/team'} component={Team}/>
         </Switch>
         {/* TODO: Add footer */}
