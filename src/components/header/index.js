@@ -13,6 +13,15 @@ class Header extends React.Component {
     // Manage firebase OAuth
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
+        firebase.database().ref('/users/').on('value', snapshot => {
+          if (!snapshot.hasChild(user.uid)) {
+            firebase.database().ref('/users/' + user.uid).set({
+              email: user.email,
+              name: user.displayName,
+              uid: user.uid
+            })
+          }
+        });
         this.props.signedIn(user);
       } else {
         this.props.signedOut();

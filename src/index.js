@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import Icons from 'uikit/dist/js/uikit-icons';
 import UIKit from 'uikit';
 import * as firebase from 'firebase';
 
 import registerServiceWorker from './registerServiceWorker';
-import {getStore} from "./store";
+import {getStore, getState} from "./store";
 import 'uikit/dist/css/uikit.min.css'
 import './css/index.css';
 
@@ -41,7 +41,13 @@ ReactDOM.render(
         <Header/>
         <Switch>
           <Route exact path='/' component={Root}/>
-          <Route exact path={'/dashboard'} component={Dashboard}/>
+          <Route exact path={'/dashboard'} render={() => {
+            if (getState().auth.user) {
+              return <Dashboard/>
+            } else {
+              return <Redirect to={'/'}/>
+            }
+          }}/>
           <Route exact path={'/timeline'} render={() => <div>Timeline will render here.</div>}/>
           <Route exact path={'/contact'} render={() => <div>Contact information will render here.</div>}/>
           <Route exact path={'/sponsors'} render={() => <div>Sponsors will render here.</div>}/>

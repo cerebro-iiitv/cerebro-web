@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
+import * as firebase from 'firebase';
 
 import {unregisterFromEvent} from "../../actions/eventActions";
 
@@ -17,6 +18,7 @@ class Dashboard extends React.Component {
             {event.name} <button onClick={() => this.props.unregisterFromEvent(event)}>Unregister</button></li>)}
         </ul>
       </div>
+      <button onClick={() => firebase.auth().signOut()}>Sign out</button>
     </div>
   }
 }
