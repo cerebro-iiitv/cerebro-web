@@ -6,13 +6,14 @@ import * as firebase from 'firebase';
 class SignInComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.ui = new firebaseui.auth.AuthUI(firebase.auth());
+    if (!window.authUi)
+      window.authUi = new firebaseui.auth.AuthUI(firebase.auth());
 
   }
 
   componentDidMount() {
     let uiConfig = {
-      signInSuccessUrl: '/',
+      signInSuccessUrl: '#',
       signInOptions: [
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       ],
@@ -21,7 +22,7 @@ class SignInComponent extends React.Component {
 
     // Initialize the FirebaseUI Widget using Firebase.
     // The start method will wait until the DOM is loaded.
-    this.ui.start('#firebaseui-auth-container', uiConfig);
+    window.authUi.start('#firebaseui-auth-container', uiConfig);
   }
 
   render() {
