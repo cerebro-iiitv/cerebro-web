@@ -4,13 +4,7 @@ import {connect} from 'react-redux';
 class Timeline extends React.Component {
   render() {
     let events = this.props.event.events;
-    events.sort((a, b) => {
-      if (Date.parse(a['start-time']) < Date.parse(b['start-time'])) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
+    events.sort((a, b) => (Date.parse(a['start-time']) - Date.parse(b['start-time'])));
     return <div>
       {events.map(event => <li key={event.id}>{event.name}</li>)}
     </div>
