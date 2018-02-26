@@ -10,6 +10,8 @@ import registerServiceWorker from './registerServiceWorker';
 import {getStore} from "./store";
 import 'uikit/dist/css/uikit.min.css'
 import './css/index.css';
+
+// Components
 import Root from './components';
 import Header from './components/header';
 import Team from './components/Team';
