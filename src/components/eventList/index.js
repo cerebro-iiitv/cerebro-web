@@ -3,18 +3,15 @@ import {connect} from 'react-redux';
 
 import '../../css/Event.css';
 import Panel from "../Panel";
-// import Selectors from '../Selectors';
 
 class EventList extends React.Component {
 
+  // TODO: Show loading indicator if event list is empty
+  // TODO: Replace Panel with event card
   render() {
     return (
       <div>
         {this.props.event.events.map((event, idx) => <Panel key={idx} event={event} />)}
-        {/*<section className="wrapper events" style={this.state.wrapperStyle}>*/}
-        {/*<Selectors events={this.props.event.events} activeID={this.state.activeID} handleChangeActive={this.changeActive}/>*/}
-        {/*<Panel event={this.props.event.events[this.state.activeID]} panelStyle={this.state.panelStyle}/>*/}
-        {/*</section>*/}
       </div>
     );
   }
