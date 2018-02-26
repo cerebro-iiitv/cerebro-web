@@ -11,7 +11,7 @@ class Dashboard extends React.Component {
       <div>Welcome {this.props.user ? this.props.user.displayName : 'human'}.</div>
       <div>
         <ul>
-          {userRegisteredEvents.map(event => <li>{event.name}</li>)}
+          {userRegisteredEvents.map(event => <li key={event.id}>{event.name}</li>)}
         </ul>
       </div>
     </div>
