@@ -2,7 +2,7 @@ html, body {
 	background: black;
 	height: 100%;
 	overflow-x: hidden;
-  color: white;
+	color: white;
 }
 
 
@@ -55,6 +55,7 @@ html, body {
 	display: flex;
 	width: 100vw;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .primary-color {
