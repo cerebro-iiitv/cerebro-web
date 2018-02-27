@@ -42,7 +42,10 @@ class Panel extends React.Component {
         <p className={'uk-text-left panel-team-size primary-color'}>{dateString}</p>
         <p className={'uk-text-left panel-content'}>{this.props.event.description}</p>
         <p className={'panel-buttons'}>
-          <span className={'panel-register'} onClick={this.handleRegister.bind(this)}>{isRegistered ? 'Unregister' : 'Register'}</span>
+          {isRegistered ?
+            <span className={'panel-unregister'} onClick={this.handleRegister.bind(this)}>Unregister</span> :
+            <span className={'panel-register'} onClick={this.handleRegister.bind(this)}>Register</span>
+          }
           <span className={'panel-more'} onClick={this.navigateToEvent.bind(this)}>View Details</span>
         </p>
       </div>
