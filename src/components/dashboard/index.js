@@ -19,7 +19,7 @@ class Dashboard extends React.Component {
         {this.props.user && <img className={'uk-border-circle user-img'} src={this.props.user.photoURL} alt={'User'}/>}
         <div className="dashboard-user-content">
           <div className="user-name">{this.props.user ? this.props.user.displayName : 'human'}.</div>
-          <p><b>Current mobile number: </b>{this.props.userPhone}</p>
+          <p><b>Mobile: </b>{this.props.userPhone}</p>
           <button className="uk-button uk-flex-bottom uk-button-secondary" onClick={() => firebase.auth().signOut()}>Sign out</button>
         </div>
       </div>
