@@ -8,6 +8,15 @@ import {unregisterFromEvent} from "../../actions/eventActions";
 import {saveUserPhone} from "../../actions/userPhoneReducer";
 
 class Dashboard extends React.Component {
+  componentDidMount() {
+    this.mobileInput.addEventListener('keyup', event => {
+      event.preventDefault();
+      if(event.keyCode === 13) {
+        this.props.saveUserPhone(this.mobileInput.value);
+        this.mobileInput.value = '';
+      }
+    })
+  }
   render() {
     if (!this.props.user) {
       return <Redirect to={'/'}/>
@@ -45,8 +54,8 @@ class Dashboard extends React.Component {
         </tbody>
       </table>
       <div className="update-mobile">
-        <input class="uk-input uk-form-width-medium" type="text" placeholder="Medium" type={'phone'} id={'phone-input'} placeholder={'Mobile'} />
-        <button className="uk-button uk-button-secondary" onClick={() => {this.props.saveUserPhone(document.getElementById('phone-input').value)}}>Save</button>
+        <input ref={ref => this.mobileInput = ref} class="uk-input uk-form-width-medium" type="text" placeholder="Medium" type={'phone'} id={'phone-input'} placeholder={'Mobile'} />
+        <button className="uk-button uk-button-secondary" onClick={() => {this.props.saveUserPhone(this.mobileInput.value)}}>Save</button>
       </div>
     </div>
   }
