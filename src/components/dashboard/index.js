@@ -39,7 +39,7 @@ class Dashboard extends React.Component {
                 <td>{event.id}</td>
                 <td>{event.name}</td>
                 <td>-</td>
-                <td><button className="uk-button uk-button-default" type="button" onClick={() => this.props.unregisterFromEvent(event)}>Unregister</button></td>
+                <td><button className="uk-button primary-color primary-color-border uk-button-default" type="button" onClick={() => this.props.unregisterFromEvent(event)}>Unregister</button></td>
             </tr>
           )}
         </tbody>
