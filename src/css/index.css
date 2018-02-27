@@ -2,20 +2,13 @@ html, body {
 	background: black;
 	height: 100%;
 	overflow-x: hidden;
+  color: white;
 }
 
 
 .timer {
 	display: flex;
 	color: #FF6E2C;
-}
-
-.countdown {
-	display: flex;
-	height: 85vh;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
 }
 
 .countdown-timer {
@@ -29,7 +22,6 @@ html, body {
 
 .team-card {
 	width: 300px;
-	background-color: #1e87f0;
 }
 
 .dashboard {

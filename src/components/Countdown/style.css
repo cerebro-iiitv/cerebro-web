@@ -1,0 +1,26 @@
+.countdown {
+  display: flex;
+  height: calc(100vh - 72px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cerebro-hero {
+  height: 200px;
+}
+
+.uk-countdown-number {
+  font-size: 35px;
+  color: #FF6E2C;
+}
+
+.uk-countdown-number {
+  font-size: 35px;
+}
+
+.countdown-header {
+  margin-top: -35px;
+  padding: 4px 16px;
+  background-color: black;
+}
