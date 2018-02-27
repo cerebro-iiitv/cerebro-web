@@ -17,12 +17,14 @@
   background-color: #FF6E2C;
   padding: 9px 17px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .panel-more {
   border: 1px solid #FF6E2C;
   padding: 8px 16px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .panel-buttons {
