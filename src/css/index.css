@@ -1,8 +1,9 @@
-body {
+html, body {
 	background: #323c41;
 	height: 100%;
 	overflow-x: hidden;
 }
+
 
 .timer {
 	display: flex;
