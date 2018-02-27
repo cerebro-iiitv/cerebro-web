@@ -1,0 +1,12 @@
+.heading-text {
+  color: white!important;
+}
+
+.heading-text span {
+  padding-bottom: 6px;
+}
+
+.uk-active .heading-text span {
+  border-bottom: 2px solid #FF6E2C;
+  padding-bottom: 4px;
+}

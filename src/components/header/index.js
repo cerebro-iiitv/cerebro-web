@@ -7,6 +7,7 @@ import SignIn from '../signIn';
 import {signedIn, signedOut} from "../../actions/authActions";
 import {loadEvents} from "../../actions/eventActions";
 import {loadUserPhone} from "../../actions/userPhoneReducer";
+import './styles.css';
 
 class Header extends React.Component {
 
@@ -48,15 +49,14 @@ class Header extends React.Component {
         <div className="uk-navbar-center">
           <ul className="uk-navbar-nav">
             <li className={[this.props.location.pathname === '/' ? 'uk-active' : ''].join(' ')}>
-              <Link to={'/'}>Home</Link></li>
+              <Link className={'heading-text'} to={'/'}><span>Home</span></Link></li>
             <li className={[this.props.location.pathname === '/timeline' ? 'uk-active' : ''].join(' ')}>
-              <Link to={'/timeline'}>Timeline</Link></li>
-            <li className={[this.props.location.pathname === '/events' ? 'uk-active' : ''].join(' ')}>
-              <Link to={'/events'}>Events</Link></li>
+              <Link className={'heading-text'} to={'/timeline'}><span>Timeline</span></Link></li>
             <li className={[this.props.location.pathname === '/about' ? 'uk-active' : ''].join(' ')}>
-              <Link to={'/about'}>About Cerebro</Link></li>
+              <Link className={'heading-text'} to={'/about'}><span>About</span></Link></li>
             <li className={[this.props.location.pathname === '/dashboard' ? 'uk-active' : ''].join(' ')}>
-              {!this.props.signedIN ? <SignIn/> : <Link to={'/dashboard'}>Dashboard</Link>}</li>
+              {!this.props.signedIN ? <SignIn/> : <Link className={'heading-text'} to={'/dashboard'}>
+                <span>Dashboard</span></Link>}</li>
           </ul>
         </div>
       </nav>
