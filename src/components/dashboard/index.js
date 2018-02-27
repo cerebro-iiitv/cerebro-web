@@ -17,7 +17,11 @@ class Dashboard extends React.Component {
     return <div className="dashboard">
       <div className="user-details">
         {this.props.user && <img className={'uk-border-circle user-img'} src={this.props.user.photoURL} alt={'User'}/>}
-        <div className="user-name">{this.props.user ? this.props.user.displayName : 'human'}.</div>
+        <div className="dashboard-user-content">
+          <div className="user-name">{this.props.user ? this.props.user.displayName : 'human'}.</div>
+          <p><b>Current mobile number: </b>{this.props.userPhone}</p>
+          <button className="uk-button uk-flex-bottom uk-button-secondary" onClick={() => firebase.auth().signOut()}>Sign out</button>
+        </div>
       </div>
       <h3>Registered Events</h3>
       <table class="uk-table uk-table-middle uk-table-divider">
@@ -42,12 +46,10 @@ class Dashboard extends React.Component {
           )}
         </tbody>
       </table>
-      <div>
-        <p><b>Current mobile number: </b>{this.props.userPhone}</p>
-        <input type={'phone'} id={'phone-input'} placeholder={'Mobile'}/>
-        <button onClick={() => {this.props.saveUserPhone(document.getElementById('phone-input').value)}}>Save</button>
+      <div className="update-mobile">
+        <input class="uk-input uk-form-width-medium" type="text" placeholder="Medium" type={'phone'} id={'phone-input'} placeholder={'Mobile'} />
+        <button className="uk-button uk-button-secondary" onClick={() => {this.props.saveUserPhone(document.getElementById('phone-input').value)}}>Save</button>
       </div>
-      <button onClick={() => firebase.auth().signOut()}>Sign out</button>
     </div>
   }
 }
