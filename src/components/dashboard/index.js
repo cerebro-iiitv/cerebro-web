@@ -14,6 +14,7 @@ class Dashboard extends React.Component {
     }
     let userRegisteredEvents = this.props.events.filter(
       event => _.some(Object.keys(event.participants), uid => uid === this.props.user.uid));
+
     return <div className="dashboard">
       <div className="user-details">
         {this.props.user && <img className={'uk-border-circle user-img'} src={this.props.user.photoURL} alt={'User'}/>}

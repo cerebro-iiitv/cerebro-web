@@ -1,15 +1,61 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+import _ from 'lodash';
+
+import './styles.css';
+import cerebroHero from '../Countdown/cerebro-hero.png';
+import {unregisterFromEvent, registerToEvent} from "../../actions/eventActions";
 
 class Panel extends React.Component {
+  navigateToEvent() {
+    this.props.history.push('/events/' + this.props.event.id);
+  }
+
+  handleRegister() {
+    let isRegistered = _.some(Object.keys(this.props.event.participants), uid => uid === this.props.user.uid);
+
+    if (isRegistered) {
+      this.props.unregisterFromEvent(this.props.event);
+    } else {
+      this.props.registerToEvent(this.props.event);
+    }
+  }
+
   render() {
-    return <div className="uk-text-center panel">
-        <Link to={'/events/' + this.props.event.id}>
-          <h2 className="panel-header">{this.props.event.name}</h2>
-        </Link>
-        <p className="panel-info">{this.props.event.description}</p>
+    let date = new Date(this.props.event['start-time']);
+
+    let dateString;
+    if (!isNaN(date.getTime())) {
+      dateString = 'MAR ' + date.getDate() + ', ' + (date.getHours() % 12 < 10 ? '0'
+        + date.getHours() % 12 : date.getHours() % 12) + ':' + (date.getMinutes() < 10 ? '0'
+        + date.getMinutes() : date.getMinutes()) + ' ' + (date.getHours() >= 12 ? 'PM' : 'AM');
+    }
+
+    let isRegistered = _.some(Object.keys(this.props.event.participants), uid => uid === this.props.user.uid);
+
+    return <div className={'uk-width-1-2@s uk-width-1-3@m uk-width-1-3@l'}>
+      <div className="uk-card uk-card-body event-panel">
+        <img src={cerebroHero} className={'uk-margin-bottom'}/>
+        <h3 className="uk-card-title white">{this.props.event.name}</h3>
+        <p className={'uk-text-left panel-team-size primary-color'}>TEAM SIZE: <b>{this.props.event['team-size']}</b></p>
+        <p className={'uk-text-left panel-team-size primary-color'}>{dateString}</p>
+        <p className={'uk-text-left panel-content'}>{this.props.event.description}</p>
+        <p className={'panel-buttons'}>
+          <span className={'panel-register'} onClick={this.handleRegister.bind(this)}>{isRegistered ? 'Unregister' : 'Register'}</span>
+          <span className={'panel-more'} onClick={this.navigateToEvent.bind(this)}>View Details</span>
+        </p>
       </div>
+    </div>
   }
 }
 
-export default Panel;
+const mapStateToProps = state => {
+  return {
+    user: state.auth.user
+  }
+};
+
+export default withRouter(connect(mapStateToProps, {
+  unregisterFromEvent, registerToEvent
+})(Panel));

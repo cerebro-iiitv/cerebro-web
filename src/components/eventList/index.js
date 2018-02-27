@@ -1,8 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import '../../css/Event.css';
 import Panel from "../Panel";
+import './styles.css';
 
 class EventList extends React.Component {
 
@@ -10,8 +10,13 @@ class EventList extends React.Component {
   // TODO: Replace Panel with event card
   render() {
     return (
-      <div>
-        {this.props.event.events.map((event, idx) => <Panel key={idx} event={event} />)}
+      <div className={'uk-container'}>
+        <div className={'uk-text-center uk-margin-large-bottom'}>
+          <span className={'event-list-heading'}>EVENTS</span>
+        </div>
+        <div uk-grid="true" className={'uk-grid-large uk-child-width-expand@s'}>
+          {this.props.event.events.map((event, idx) => <Panel key={idx} event={event} />)}
+        </div>
       </div>
     );
   }

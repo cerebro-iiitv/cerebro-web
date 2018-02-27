@@ -1,0 +1,31 @@
+.event-panel {
+  border: 1px solid white;
+}
+
+.panel-content {
+  font-family: monospace;
+  height: 9em;
+  overflow: hidden;
+}
+
+.panel-team-size {
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.panel-register {
+  background-color: #FF6E2C;
+  padding: 9px 17px;
+  cursor: pointer;
+}
+
+.panel-more {
+  border: 1px solid #FF6E2C;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.panel-buttons {
+  display: flex;
+  justify-content: space-between;
+}
