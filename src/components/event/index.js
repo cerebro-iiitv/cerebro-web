@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
+import '../../css/EventDetail.css'
 
 import {registerToEvent, unregisterFromEvent} from "../../actions/eventActions";
 
@@ -17,18 +18,12 @@ class Event extends React.Component {
      * the user has already registered to the event and display the
      * register button accordingly
      */
-    return <div>
-      <h2>{event.name}</h2>
-      <p>{event.description}</p>
+    return <div className= "container">
+    <div className = "wrapper">
+    <div className = "event-info">
+      <img src="300.png"></img>
       <div>
-        <div><b>Start time</b>: {event['start-time']}</div>
-        <div><b>End time</b>: {event['end-time']}</div>
-      </div>
-      <ul>
-        {event.rules.map((rule, idx) => <li key={idx}>{rule}</li>)}
-      </ul>
-      <div>
-        <h3>Contacts:</h3>
+        <h3 className= "contacts">Contacts:</h3>
         <ul>
           {Object.keys(event.contact).map(role => <div key={role}>
             <b>{role}</b>: {event.contact[role].name} ({event.contact[role].phone})
@@ -36,10 +31,33 @@ class Event extends React.Component {
         </ul>
       </div>
       <div><b>Team size</b>: {event['team-size']}</div>
-      <div>{this.props.user ? <button
-        onClick={() => isRegistered ? this.props.unregisterFromEvent(event) : this.props.registerToEvent(event)}>
-        {isRegistered ? 'Unregister' : 'Register'}</button> : 'Please log in to register!'}</div>
-    </div>
+      </div>
+
+        <div className = "event-description">
+          <h2>{event.name}</h2>
+          <div className = "butt">
+            <div>{this.props.user ? <button className= "register"
+              onClick={() => isRegistered ? this.props.unregisterFromEvent(event) : this.props.registerToEvent(event)}>
+              {isRegistered ? 'Unregister' : 'Register'}</button> : 'Please log in to register!'}</div>
+              <div className = "space"></div>
+              <div>{this.props.user ? <button className = "go-back"
+              onClick={() => isRegistered ? this.props.unregisterFromEvent(event) : this.props.registerToEvent(event)}>
+              {isRegistered ? 'Unregister' : 'Register'}</button> : 'Please log in to register!'}</div>
+          </div>
+          <p>{event.description}</p>
+          <div>
+            <div><b>Start time</b>: {event['start-time']}</div>
+            <div><b>End time</b>: {event['end-time']}</div>
+          </div>
+          <div className = "rules"><b><h3 className= "header-rules">Rules</h3></b>
+            <ul>
+              {event.rules.map((rule, idx) => <li key={idx}>{rule}</li>)}
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      </div>
   }
 }
 
