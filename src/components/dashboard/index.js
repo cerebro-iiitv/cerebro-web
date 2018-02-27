@@ -19,7 +19,7 @@ class Dashboard extends React.Component {
         {this.props.user && <img className={'uk-border-circle user-img'} src={this.props.user.photoURL} alt={'User'}/>}
         <div className="dashboard-user-content">
           <div className="user-name">{this.props.user ? this.props.user.displayName : 'human'}.</div>
-          <p><b>Current mobile number: </b>{this.props.userPhone}</p>
+          <p><b>Mobile: </b>{this.props.userPhone}</p>
           <button className="uk-button uk-flex-bottom uk-button-secondary" onClick={() => firebase.auth().signOut()}>Sign out</button>
         </div>
       </div>
@@ -30,7 +30,6 @@ class Dashboard extends React.Component {
               <th>#</th>
               <th>Event Name</th>
               <th class="uk-width-small">Starts On</th>
-              <th class="uk-width-small">Registered On</th>
               <th class="uk-width-small">Action</th>
             </tr>
         </thead>
@@ -40,8 +39,7 @@ class Dashboard extends React.Component {
                 <td>{event.id}</td>
                 <td>{event.name}</td>
                 <td>-</td>
-                <td>-</td>
-                <td><button className="uk-button uk-button-default" type="button" onClick={() => this.props.unregisterFromEvent(event)}>Unregister</button></td>
+                <td><button className="uk-button primary-color primary-color-border uk-button-default" type="button" onClick={() => this.props.unregisterFromEvent(event)}>Unregister</button></td>
             </tr>
           )}
         </tbody>

@@ -56,3 +56,11 @@ html, body {
 	width: 100vw;
 	justify-content: space-between;
 }
+
+.primary-color {
+	color: #FF6E2C;
+}
+
+.primary-color-border {
+	border-color: #FF6E2C;
+}
