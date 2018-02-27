@@ -31,3 +31,25 @@ html, body {
 	width: 300px;
 	background-color: #1e87f0;
 }
+
+.dashboard {
+	display: flex;
+	flex-direction: column;
+	margin-left: 100px;
+	margin-right: 100px
+}
+
+.user-img {
+	height: 50px;
+	width: 50px;
+}
+
+.user-details {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.user-name {
+	margin-left: 30px;
+	align-self: center;
+}
