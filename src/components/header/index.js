@@ -37,9 +37,16 @@ class Header extends React.Component {
         if (!event.participants) {
           event.participants = {};
         }
+        if (!event.contact) {
+          event.contact = [];
+        }
         return event;
       });
       this.props.loadEvents(value);
+    });
+    // Manage team
+    firebase.database().ref('/team/').on('value', snapshot => {
+      console.log(snapshot.val());
     });
   }
 

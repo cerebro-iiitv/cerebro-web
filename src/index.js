@@ -14,7 +14,7 @@ import './css/index.css';
 // Components
 import Root from './components';
 import Header from './components/header';
-import Team from './components/Team';
+import About from './components/about';
 import Dashboard from './components/dashboard';
 import Event from './components/event';
 import Timeline from './components/timeline';
@@ -50,10 +50,8 @@ ReactDOM.render(
             }
           }}/>
           <Route exact path={'/timeline'} component={Timeline}/>
-          <Route exact path={'/contact'} render={() => <div>Contact information will render here.</div>}/>
-          <Route exact path={'/sponsors'} render={() => <div>Sponsors will render here.</div>}/>
           <Route exact path={'/events/:id'} component={Event}/>
-          <Route exact path={'/team'} component={Team}/>
+          <Route exact path={'/about'} component={About}/>
         </Switch>
         {/* TODO: Add footer */}
       </div>
