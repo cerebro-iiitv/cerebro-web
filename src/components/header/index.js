@@ -44,7 +44,7 @@ class Header extends React.Component {
   }
 
   render() {
-    return <div>
+    return <div style={{height: '72px'}}>
       <nav className="uk-navbar-container uk-margin uk-dark uk-navbar-transparent" uk-navbar="mode: click">
         <div className="uk-navbar-center">
           <ul className="uk-navbar-nav">
