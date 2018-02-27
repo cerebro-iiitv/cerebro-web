@@ -5,7 +5,6 @@ html, body {
 	color: white;
 }
 
-
 .timer {
 	display: flex;
 	color: #FF6E2C;
@@ -64,6 +63,7 @@ html, body {
 
 .primary-color-border {
 	border-color: #FF6E2C;
+	background-color: #fff0;
 }
 
 .white {
