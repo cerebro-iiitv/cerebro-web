@@ -12,4 +12,9 @@
 	margin-bottom: 4px;
 }
 
+.section-title {
+	color: white;
+	padding-left: 8px;
+	border-left: 4px solid #FF6E2C;
+}
 
