@@ -57,3 +57,7 @@ html, body {
 .white {
   color: white;
 }
+
+.event-description {
+  width: 50%;
+}
