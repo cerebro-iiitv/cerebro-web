@@ -14,6 +14,7 @@ import './css/index.css';
 // Components
 import Root from './components';
 import Header from './components/header';
+import Footer from './components/footer';
 import About from './components/about';
 import Dashboard from './components/dashboard';
 import Event from './components/event';
@@ -53,7 +54,7 @@ ReactDOM.render(
           <Route exact path={'/events/:id'} component={Event}/>
           <Route exact path={'/about'} component={About}/>
         </Switch>
-        {/* TODO: Add footer */}
+        <Footer />
       </div>
     </BrowserRouter>
   </Provider>,

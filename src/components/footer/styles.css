@@ -1,0 +1,15 @@
+.links-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer div{
+	width: 30vw;
+}
+
+.footer-links {
+	border-bottom: 1px dashed #FF6E2C;
+	margin-bottom: 4px;
+}
+
+
