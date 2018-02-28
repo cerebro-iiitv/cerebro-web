@@ -7,7 +7,7 @@ class Footer extends Component {
 	render() {
 		return(
 			<div className="uk-flex uk-flex-center footer">
-			    <div class="uk-card uk-card-body fest-logo">
+			    <div className="uk-card uk-card-body fest-logo">
 			    	<img src="/image1.png" alt=""/>
 		    	</div>
 			    
