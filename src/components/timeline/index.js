@@ -9,22 +9,23 @@ class Timeline extends React.Component {
     let events = this.props.event.events.slice();
     events.sort((a, b) => (Date.parse(a['start-time']) - Date.parse(b['start-time'])));
     return <div>
-      {events.map(event => 
-        <VerticalTimeline key={event.id}>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date={event["start-time"]}
-            iconStyle={{ background: '#FF6E2C', color: '#fff' }}
-            icon={<FaGithub />}
-          >
-            <h3 className="vertical-timeline-element-title">{event.name}</h3>
-            <h4 className="vertical-timeline-element-subtitle">Participate in a team of {event["team-size"]} people(s)</h4>
-            <p>
-              {event.description}
-            </p>
-          </VerticalTimelineElement>
+        <VerticalTimeline >
+          {events.map(event => 
+            <VerticalTimelineElement 
+              className="vertical-timeline-element--work"
+              date={event["start-time"]}
+              iconStyle={{ background: '#FF6E2C', color: '#fff' }}
+              icon={<FaGithub />}
+              key={event.id}
+            >
+              <h3 className="vertical-timeline-element-title">{event.name}</h3>
+              <h4 className="vertical-timeline-element-subtitle">Participate in a team of {event["team-size"]} people(s)</h4>
+              <p>
+                {event.description}
+              </p>
+            </VerticalTimelineElement>
+          )}
         </VerticalTimeline>
-      )}
     </div>
   }
 }
