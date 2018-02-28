@@ -55,7 +55,7 @@ class Dashboard extends React.Component {
         </tbody>
       </table>
       <div className="update-mobile">
-        <input ref={ref => this.mobileInput = ref} className="uk-input uk-form-width-medium" type="text" placeholder="Medium" type={'phone'} id={'phone-input'} placeholder={'Mobile'} />
+        <input ref={ref => this.mobileInput = ref} className="uk-input uk-form-width-medium" type={'phone'} id={'phone-input'} placeholder={'Mobile'} />
         <button className="uk-button uk-button-secondary" onClick={() => {this.props.saveUserPhone(this.mobileInput.value); this.mobileInput.value=''}}>Save</button>
       </div>
     </div>
