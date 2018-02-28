@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FaFacebook, FaInstagram} from 'react-icons/lib/fa';
+import {FaFacebook, FaInstagram, FaGithub, FaPhone} from 'react-icons/lib/fa';
 
 import './styles.css';
 
@@ -7,7 +7,7 @@ class Footer extends Component {
 	render() {
 		return(
 			<div className="uk-flex uk-flex-center footer">
-			    <div class="uk-card uk-card-body">
+			    <div class="uk-card uk-card-body fest-logo">
 			    	<img src="/image1.png" alt=""/>
 		    	</div>
 			    
@@ -22,11 +22,13 @@ class Footer extends Component {
 					</div>
 				</div>
 			    
-			    <div className="uk-card uk-card-body uk-margin-left">
+			    <div className="uk-card contact-section uk-card-body uk-margin-left">
 			    	<h4 className="section-title">Contact</h4>
 			    	<div className="icons">
 			    		<FaFacebook />
 			    		<FaInstagram />
+			    		<FaGithub />
+			    		<FaPhone />
 			    	</div>
 			    </div>
 			</div>

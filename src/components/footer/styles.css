@@ -7,6 +7,19 @@
 	width: 30vw;
 }
 
+.fest-logo {
+	width: 25vw;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact-section {
+	width: 40vw;
+}
+
 .footer-links {
 	border-bottom: 1px dashed #FF6E2C;
 	margin-bottom: 4px;
@@ -19,3 +32,7 @@
 	border-left: 4px solid #FF6E2C;
 }
 
+.icons {
+	display: flex;
+	justify-content: space-around;
+}
