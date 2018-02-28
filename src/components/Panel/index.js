@@ -32,7 +32,7 @@ class Panel extends React.Component {
         + date.getMinutes() : date.getMinutes()) + ' ' + (date.getHours() >= 12 ? 'PM' : 'AM');
     }
 
-    let isRegistered = _.some(Object.keys(this.props.event.participants), uid => uid === this.props.user.uid);
+    let isRegistered = this.props.user && _.some(Object.keys(this.props.event.participants), uid => uid === this.props.user.uid);
 
     return <div className={'uk-width-1-2@s uk-width-1-3@m uk-width-1-3@l'}>
       <div className="uk-card uk-card-body event-panel">
@@ -42,9 +42,9 @@ class Panel extends React.Component {
         <p className={'uk-text-left panel-team-size primary-color'}>{dateString}</p>
         <p className={'uk-text-left panel-content'}>{this.props.event.description}</p>
         <p className={'panel-buttons'}>
-          {isRegistered ?
+          {this.props.user && (isRegistered ?
             <span className={'panel-unregister'} onClick={this.handleRegister.bind(this)}>Unregister</span> :
-            <span className={'panel-register'} onClick={this.handleRegister.bind(this)}>Register</span>
+            <span className={'panel-register'} onClick={this.handleRegister.bind(this)}>Register</span>)
           }
           <span className={'panel-more'} onClick={this.navigateToEvent.bind(this)}>View Details</span>
         </p>
