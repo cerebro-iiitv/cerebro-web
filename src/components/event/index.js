@@ -21,7 +21,7 @@ class Event extends React.Component {
     return <div className= "container">
     <div className = "wrapper">
     <div className = "event-info">
-      <img src="300.png"></img>
+      <img src="300.png" alt=""></img>
       <div>
         <h3 className= "contacts">Contacts:</h3>
         <ul>

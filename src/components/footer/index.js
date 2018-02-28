@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Redirect} from 'react-router-dom';
 import {FaFacebook, FaInstagram} from 'react-icons/lib/fa';
 
 import './styles.css';
@@ -28,7 +27,6 @@ class Footer extends Component {
 			    	<div className="icons">
 			    		<FaFacebook />
 			    		<FaInstagram />
-
 			    	</div>
 			    </div>
 			</div>

@@ -36,7 +36,7 @@ class Panel extends React.Component {
 
     return <div className={'uk-width-1-2@s uk-width-1-3@m uk-width-1-3@l'}>
       <div className="uk-card uk-card-body event-panel">
-        <img src={cerebroHero} className={'uk-margin-bottom'}/>
+        <img src={cerebroHero} className={'uk-margin-bottom'} alt=""/>
         <h3 className="uk-card-title white">{this.props.event.name}</h3>
         <p className={'uk-text-left panel-team-size primary-color'}>TEAM SIZE: <b>{this.props.event['team-size']}</b></p>
         <p className={'uk-text-left panel-team-size primary-color'}>{dateString}</p>

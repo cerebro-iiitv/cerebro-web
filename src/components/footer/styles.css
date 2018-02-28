@@ -3,13 +3,14 @@
 	flex-direction: column;
 }
 
-.footer div{
+.links-section{
 	width: 30vw;
 }
 
 .footer-links {
 	border-bottom: 1px dashed #FF6E2C;
 	margin-bottom: 4px;
+	width: fit-content;
 }
 
 .section-title {

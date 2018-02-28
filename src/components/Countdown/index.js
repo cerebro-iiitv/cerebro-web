@@ -7,7 +7,7 @@ class Countdown extends Component {
 	render() {
 		return(
 			<div className="countdown">
-        <img className={'uk-margin-large-bottom cerebro-hero'} src={heroImage} />
+        <img className={'uk-margin-large-bottom cerebro-hero'} src={heroImage} alt="" />
         <hr style={{width: '260px'}}/>
 				<span className="countdown-header">STARTS IN</span>
 				<div className="uk-grid-small uk-child-width-auto timer" uk-grid="true"
