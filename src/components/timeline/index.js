@@ -10,16 +10,16 @@ class Timeline extends React.Component {
     events.sort((a, b) => (Date.parse(a['start-time']) - Date.parse(b['start-time'])));
     return <div>
         <VerticalTimeline >
-          {events.map(event => 
-            <VerticalTimelineElement 
+          {events.map(event =>
+            <VerticalTimelineElement
               className="vertical-timeline-element--work"
               date={event["start-time"]}
-              iconStyle={{ background: '#FF6E2C', color: '#fff' }}
-              icon={<FaGithub />}
+              iconStyle={{background: '#FF6E2C', border: 0}}
               key={event.id}
+              onClick={() => this.props.history.push('/events/' + event.id)}
             >
-              <h3 className="vertical-timeline-element-title">{event.name}</h3>
-              <h4 className="vertical-timeline-element-subtitle">Participate in a team of {event["team-size"]} people(s)</h4>
+              <div className="vertical-timeline-element-title">{event.name}</div>
+              <div className="vertical-timeline-element-subtitle faded">Team of {event["team-size"]}</div>
               <p>
                 {event.description}
               </p>

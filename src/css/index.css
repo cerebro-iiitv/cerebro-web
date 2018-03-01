@@ -66,3 +66,23 @@ html, body {
 .event-description {
   width: 50%;
 }
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  color: #FF6E2C;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
+  border: 1px dashed #FF6E2C;
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.vertical-timeline-element-title {
+  font-size: 25px;
+}
+
