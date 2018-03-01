@@ -6,7 +6,9 @@ class Team extends React.Component {
     return <div>
       <div uk-grid="true" className={'uk-grid-large uk-child-width-expand@s'}>
         {this.props.team.members.map((member, idx) => <div className={'uk-width-1-3@s uk-width-1-4@m uk-width-1-5@l uk-margin-large-top uk-text-center'} key={idx}>
-          <img src={member.img ? member.img : '/fest-logo.png'} alt={member.name} className={'uk-border-circle'}/>
+          <img src={member.img ? member.img : '/fest-logo.png'} className={'uk-thumbnail uk-border-circle'}
+               alt={member.name}
+               style={{width: '100%', overflow: 'hidden', backgroundSize: 'cover', backgroundPosition: 'center'}}/>
           <div className={'uk-margin-top'}>{member.name}</div>
           <div>
             [ <span className={'primary-color'}>{this.props.team.name}</span> ]
