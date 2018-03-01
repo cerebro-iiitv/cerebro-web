@@ -47,10 +47,9 @@
 }
 
 .contacts {
-  border-left: 4px solid #FF6E2C;
+  border-left: 3px solid #FF6E2C;
   color: #FF6E2C;
-  padding-left: 4px;
-
+  padding-left: 8px;
 }
 
 .header-rules {
