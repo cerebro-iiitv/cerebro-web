@@ -54,6 +54,7 @@ class Header extends React.Component {
   render() {
     return <div style={{height: '72px'}}>
       <nav className="uk-navbar-container uk-margin uk-dark uk-navbar-transparent" uk-navbar="mode: click">
+      <div className={'institute-logo'}><img src={'https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/website.png?alt=media&token=5a13225c-3b8d-49a4-a8ac-7e6de9451857'} alt="boohoo" className="img-responsive"/></div>
         <div className="uk-navbar-center">
           <ul className="uk-navbar-nav">
             <li className={[this.props.location.pathname === '/' ? 'uk-active' : ''].join(' ')}>
