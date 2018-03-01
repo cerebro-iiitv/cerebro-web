@@ -3,7 +3,6 @@
 }
 
 .panel-content {
-  font-family: monospace;
   height: 9em;
   overflow: hidden;
 }
@@ -24,6 +23,7 @@
   font-size: 1.5rem;
   line-height: 1.4;
   height: 2.8em;
+  overflow: hidden;
 }
 
 .panel-unregister {
