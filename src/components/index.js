@@ -70,7 +70,7 @@ class Home extends React.Component {
           }
         },
         "retina_detect": true
-      }} />
+      }}/>
       <EventList/>
     </div>
   }

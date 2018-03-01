@@ -6,8 +6,6 @@ import './styles.css';
 
 class EventList extends React.Component {
 
-  // TODO: Show loading indicator if event list is empty
-  // TODO: Replace Panel with event card
   render() {
     return (
       <div className={'uk-container'}>
@@ -15,7 +13,7 @@ class EventList extends React.Component {
           <span className={'event-list-heading'}>EVENTS</span>
         </div>
         <div uk-grid="true" className={'uk-grid-large uk-child-width-expand@s'}>
-          {this.props.event.events.map((event, idx) => <Panel key={idx} event={event} />)}
+          {this.props.event.events.map((event, idx) => <Panel key={idx} event={event}/>)}
         </div>
       </div>
     );

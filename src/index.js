@@ -7,10 +7,9 @@ import UIKit from 'uikit';
 import * as firebase from 'firebase';
 
 import registerServiceWorker from './registerServiceWorker';
-import {getStore, getState} from "./store";
+import {getState, getStore} from "./store";
 import 'uikit/dist/css/uikit.min.css'
 import './css/index.css';
-
 // Components
 import Root from './components';
 import Header from './components/header';
@@ -54,7 +53,7 @@ ReactDOM.render(
           <Route exact path={'/events/:id'} component={Event}/>
           <Route exact path={'/about'} component={About}/>
         </Switch>
-        <Footer />
+        <Footer/>
       </div>
     </BrowserRouter>
   </Provider>,

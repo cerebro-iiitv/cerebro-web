@@ -23,6 +23,7 @@
   align-items: center;
   z-index: 1;
 }
+
 .selectors .selector {
   border: 1px solid #fff;
   background: none;
@@ -35,6 +36,7 @@
   -webkit-transition: background .3s ease-in-out, opacity .3s ease-in-out;
   transition: background .3s ease-in-out, opacity .3s ease-in-out;
 }
+
 .selectors .selector:hover, .selectors .selector.active {
   background: white;
   opacity: 0.9;
@@ -57,22 +59,26 @@ aside.panel {
   -webkit-transition: background 500ms ease-in-out;
   transition: background 500ms ease-in-out;
 }
+
 aside.panel h2.panel-header,
 aside.panel p.panel-info {
   margin: 0;
   padding: 1.3rem 3.5rem;
 }
+
 aside.panel h2.panel-header {
   padding-top: 2em;
-  font-family:"Segoe UI Semibold";
+  font-family: "Segoe UI Semibold";
   font-weight: lighter;
   font-size: 2.5rem;
   text-transform: capitalize;
 }
+
 aside.panel p.panel-info {
   font-size: 1.2rem;
   line-height: 1.8em;
 }
+
 aside.panel button.panel-button {
   margin: 1.3rem 3.5rem;
   padding: 0.8em 1.3em;
@@ -87,9 +93,11 @@ aside.panel button.panel-button {
   -webkit-transition: box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
   transition: box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
 }
+
 aside.panel button.panel-button:hover {
   box-shadow: inset 0 0 1.5em 1.5em #fff;
 }
+
 aside.panel button.panel-button:focus {
   outline: none;
 }

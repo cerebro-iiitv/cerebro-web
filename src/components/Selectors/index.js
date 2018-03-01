@@ -17,8 +17,8 @@ class Selectors extends React.Component {
       return;
     }
   }
-  
-  render (){
+
+  render() {
     return (
       <div className="selectors">
         {events.map((item) =>

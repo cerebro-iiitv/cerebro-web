@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,9 +23,11 @@ body {
   text-align: center;
   margin: 10px 10px 10px 10px;
 }
+
 .blog-card.spring-fever {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg) no-repeat;
 }
+
 .blog-card .color-overlay {
   /* Rectangle 11: */
   background: rgba(84, 104, 110, 0.4);
@@ -36,6 +39,7 @@ body {
   left: 0;
   transition: background 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
+
 .blog-card .gradient-overlay {
   /* bg-gradient: */
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 21%);
@@ -46,15 +50,18 @@ body {
   left: 0;
   z-index: 15;
 }
+
 .blog-card:hover .card-info {
   opacity: 1;
   bottom: 120px;
 }
+
 .blog-card:hover .title-content {
   top: 90px;
   transition: 0.5s;
   opacity: 1;
 }
+
 .blog-card:hover .color-overlay {
   background: rgba(84, 104, 110, 0.8);
 }

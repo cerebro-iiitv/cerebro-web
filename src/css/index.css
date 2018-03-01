@@ -1,8 +1,8 @@
 html, body {
-	background: black;
-	height: 100%;
-	overflow-x: hidden;
-	color: white;
+  background: black;
+  height: 100%;
+  overflow-x: hidden;
+  color: white;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -11,50 +11,50 @@ html, body {
 }
 
 .timer {
-	display: flex;
-	color: #FF6E2C;
+  display: flex;
+  color: #FF6E2C;
 }
 
 .countdown-timer {
-	align-items: flex-start;
+  align-items: flex-start;
 }
 
 .team {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .team-card {
-	width: 300px;
+  width: 300px;
 }
 
 .user-img {
-	height: 100px;
-	width: 100px;
+  height: 100px;
+  width: 100px;
 }
 
 .user-name {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 .update-mobile {
-	display: flex;
+  display: flex;
 }
 
 .dashboard-user-content {
-	display: flex;
-	width: 100vw;
-	justify-content: space-between;
-	flex-wrap: wrap;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .primary-color {
-	color: #FF6E2C;
+  color: #FF6E2C;
 }
 
 .primary-color-border {
-	border-color: #FF6E2C;
-	background-color: #fff0;
+  border-color: #FF6E2C;
+  background-color: #fff0;
 }
 
 .white {
@@ -85,20 +85,20 @@ html, body {
 }
 
 .absolute {
-	position: absolute;
+  position: absolute;
 }
 
 .square {
-	top: 0;
-	left: 0;
+  top: 0;
+  left: 0;
   height: 200px;
   width: 200px;
   background: url('https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/square.png?alt=media&token=8979df90-1eaf-466e-9ef9-94546eec3e90') no-repeat;
 }
 
 .triangle {
-	top: 0;
-	right: 0;
+  top: 0;
+  right: 0;
   height: 200px;
   width: 200px;
   background: url('https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/triangle.png?alt=media&token=f3cbbbed-2d31-4201-a051-8d123d594156') no-repeat;
@@ -106,4 +106,26 @@ html, body {
 
 canvas {
   margin-top: -100vh;
+}
+
+.firebaseui-card-content {
+  padding: 0;
+}
+
+.firebaseui-idp-google, .firebaseui-idp-google:hover, .mdl-button.firebaseui-idp-google:active, .mdl-button.firebaseui-idp-google:focus {
+  background-color: transparent;
+}
+
+.firebaseui-idp-google>.firebaseui-idp-text {
+  color: white;
+  visibility: hidden;
+}
+
+.firebaseui-idp-google>.firebaseui-idp-text:after {
+  color: white;
+  visibility: visible;
+  content: 'SIGN IN';
+  display: block;
+  margin-top: -15px;
+  margin-left: -7px;
 }

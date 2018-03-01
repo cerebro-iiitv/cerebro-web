@@ -1,30 +1,30 @@
 .wrapper {
-	justify-content: center;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .events-description {
-	display: flex;
-	flex-direction: column;
-	width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .event-info {
-	width: 40%;
+  width: 40%;
 }
 
 .butt {
-	display: flex;
+  display: flex;
 }
 
 .register {
@@ -54,7 +54,7 @@
 }
 
 .go-back {
-	border: 1px solid #FF6E2C;
+  border: 1px solid #FF6E2C;
   padding: 10px 14px;
   background-color: transparent;
   color: white;
@@ -63,7 +63,7 @@
 }
 
 .space {
-	width: 2%;
+  width: 2%;
 }
 
 .contacts {

@@ -1,23 +1,23 @@
-.vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline-element-content  {
-	color: #FF6E2C;
+.vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline-element-content {
+  color: #FF6E2C;
 }
 
 .vertical-timeline-element-content p {
-	color: #696969;
+  color: #696969;
 }
 
 .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
-	color: white;
+  color: white;
 }
 
 .vertical-timeline-element-content::before {
-	border-left-color: #FF6E2C;
+  border-left-color: #FF6E2C;
 }
 
 .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline-element:nth-child(2n):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
-	border-right-color: #FF6E2C;
+  border-right-color: #FF6E2C;
 }
 
 .vertical-timeline-element-date {
-	color: #FF6E2C;
+  color: #FF6E2C;
 }

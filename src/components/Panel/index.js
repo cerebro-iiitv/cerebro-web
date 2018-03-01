@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import _ from 'lodash';
 
 import './styles.css';
-import {unregisterFromEvent, registerToEvent} from "../../actions/eventActions";
+import {registerToEvent, unregisterFromEvent} from "../../actions/eventActions";
 
 class Panel extends React.Component {
   navigateToEvent() {
@@ -37,7 +37,8 @@ class Panel extends React.Component {
       <div className="uk-card uk-card-body event-panel">
         <img src='./fest-logo.png' className={'uk-margin-bottom'} alt=""/>
         <h3 className="uk-card-title white">{this.props.event.name}</h3>
-        <p className={'uk-text-left panel-team-size primary-color'}>TEAM SIZE: <b>{this.props.event['team-size']}</b></p>
+        <p className={'uk-text-left panel-team-size primary-color'}>TEAM SIZE: <b>{this.props.event['team-size']}</b>
+        </p>
         <p className={'uk-text-left panel-team-size primary-color'}>{dateString}</p>
         <p className={'uk-text-left panel-content'}>{this.props.event.description}</p>
         <p className={'panel-buttons'}>

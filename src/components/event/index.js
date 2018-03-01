@@ -24,11 +24,13 @@ class Event extends React.Component {
           <img src="/fest-logo.png" alt=""></img>
           <div className="uk-margin-large-top uk-flex uk-flex-center butt">
             <div>{this.props.user ? (
-                isRegistered ? <button className="unregister" onClick={() => this.props.unregisterFromEvent(event)}>Unegister</button> :
+                isRegistered ? <button className="unregister"
+                                       onClick={() => this.props.unregisterFromEvent(event)}>Unegister</button> :
                   <button className="register" onClick={() => this.props.registerToEvent(event)}>Register</button>) :
               'Please log in to register!'}
             </div>
-            <button className="uk-margin-left go-back" onClick={() => this.props.history.push('/')}> BACK TO EVENTS </button>
+            <button className="uk-margin-left go-back" onClick={() => this.props.history.push('/')}> BACK TO EVENTS
+            </button>
           </div>
         </div>
         <div className={'uk-width-1-2@s'}>
@@ -49,7 +51,8 @@ class Event extends React.Component {
           <div className="uk-margin-large-top rules">
             <div className="contacts">Rules</div>
             <ul className={'rule-ul'}>
-              {event.rules.map((rule, idx) => <li className={'uk-margin-small-top faded rule-li'} key={idx}>{rule}</li>)}
+              {event.rules.map((rule, idx) => <li className={'uk-margin-small-top faded rule-li'}
+                                                  key={idx}>{rule}</li>)}
             </ul>
           </div>
 
