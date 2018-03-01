@@ -7,6 +7,7 @@ import SignIn from '../signIn';
 import {signedIn, signedOut} from "../../actions/authActions";
 import {loadEvents} from "../../actions/eventActions";
 import {loadUserPhone} from "../../actions/userPhoneReducer";
+import {setTeam} from "../../actions/teamActions";
 import './styles.css';
 
 class Header extends React.Component {
@@ -46,8 +47,8 @@ class Header extends React.Component {
     });
     // Manage team
     firebase.database().ref('/team/').on('value', snapshot => {
-      console.log(snapshot.val());
-    });
+      this.props.setTeam(snapshot.val());
+    })
   }
 
   render() {
@@ -78,5 +79,6 @@ const mapStateToProps = state => {
 };
 
 export default withRouter(connect(mapStateToProps, {
-  signedIn, signedOut, loadEvents, loadUserPhone
+  signedIn, signedOut, loadEvents, loadUserPhone,
+  setTeam
 })(Header));
