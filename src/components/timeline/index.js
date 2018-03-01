@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {FaGithub} from 'react-icons/lib/fa';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
