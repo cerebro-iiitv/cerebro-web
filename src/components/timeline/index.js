@@ -16,11 +16,10 @@ class Timeline extends React.Component {
             date={event["start-time"]}
             iconStyle={{background: '#FF6E2C', border: 0}}
             key={event.id}
-            onClick={() => this.props.history.push('/events/' + event.id)}
           >
-            <div className="vertical-timeline-element-title">{event.name}</div>
-            <div className="vertical-timeline-element-subtitle faded">Team of {event["team-size"]}</div>
-            <p>
+            <div className="vertical-timeline-element-title" onClick={() => this.props.history.push('/events/' + event.id)}>{event.name}</div>
+            <div className="vertical-timeline-element-subtitle faded" onClick={() => this.props.history.push('/events/' + event.id)}>Team of {event["team-size"]}</div>
+            <p onClick={() => this.props.history.push('/events/' + event.id)}>
               {event.description}
             </p>
           </VerticalTimelineElement>
