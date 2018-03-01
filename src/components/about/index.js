@@ -1,5 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
+import Team from '../team';
 import './styles.css';
 
 class About extends React.Component {
@@ -12,11 +14,7 @@ class About extends React.Component {
       </div>
       <div className={'uk-margin-large-top'}>
         <div className={'about-title'}>Team</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea <span className={'primary-color'}>commodo consequat</span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.</p>
+        {this.props.team.map((team, idx) => <Team key={idx} team={team}/>)}
       </div>
       <div className={'uk-margin-large-top'}>
         <div className={'about-title'}>Sponsors</div>
@@ -30,4 +28,10 @@ class About extends React.Component {
   }
 }
 
-export default About;
+const mapStateToProps = state => {
+  return {
+    team: state.team.team
+  }
+};
+
+export default connect(mapStateToProps)(About);
