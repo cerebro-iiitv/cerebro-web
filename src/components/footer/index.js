@@ -32,7 +32,7 @@ class Footer extends Component {
 			    	<div className="icons">
 			    		<a href=""><div class="single-icon"> <FaFacebook /></div></a>
 			    		<a href=""><div class="single-icon"><FaInstagram /></div></a>
-			    		<a href=""><div class="single-icon"><FaGithub /></div></a>
+			    		<a href="http://github.com/cerebro-iiitv"><div class="single-icon"><FaGithub /></div></a>
 			    	</div>
 			    	<div>Email: cerebro.iiitv@gmail.com</div>
 			    	<div>Address: c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat - 382028</div>
