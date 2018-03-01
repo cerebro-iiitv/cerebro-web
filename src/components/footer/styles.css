@@ -43,3 +43,7 @@
 	font-size: x-large;
 	color: #FF6E2C;
 }
+
+.links-section a {
+	text-decoration: none;
+}
