@@ -66,3 +66,18 @@ html, body {
 .event-description {
   width: 50%;
 }
+
+.absolute {
+	position: absolute;
+}
+
+.square {
+	top: 0;
+	left: 0;
+}
+
+
+.triangle {
+	top: 0;
+	right: 0;
+}
