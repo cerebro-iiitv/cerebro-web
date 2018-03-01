@@ -48,7 +48,7 @@ class Header extends React.Component {
     // Manage team
     firebase.database().ref('/team/').on('value', snapshot => {
       this.props.setTeam(snapshot.val());
-    })
+    });
   }
 
   render() {
