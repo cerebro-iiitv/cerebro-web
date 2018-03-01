@@ -66,3 +66,8 @@ html, body {
 .event-description {
   width: 50%;
 }
+
+.uk-container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
