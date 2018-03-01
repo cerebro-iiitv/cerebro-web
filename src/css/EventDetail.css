@@ -28,18 +28,38 @@
 }
 
 .register {
-	float: left;
-	background-color: #FF6E2C;
-	border: 0px;
-  padding: 10px;
+  float: left;
+  background-color: #FF6E2C;
+  padding: 10px 14px;
+  border: 0;
   color: white;
+  cursor: pointer;
+}
+
+.register:focus {
+  outline: none;
+}
+
+.unregister:focus {
+  outline: none;
+}
+
+.unregister {
+  float: left;
+  background-color: white;
+  padding: 10px 14px;
+  border: 0;
+  color: #FF6E2C;
+  cursor: pointer;
 }
 
 .go-back {
-	float: right;
-	border: 1px solid orange;
-	background-color: transparent;
-  padding: 10px;
+	border: 1px solid #FF6E2C;
+  padding: 10px 14px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .space {
@@ -48,7 +68,6 @@
 
 .contacts {
   border-left: 3px solid #FF6E2C;
-  color: #FF6E2C;
   padding-left: 8px;
 }
 
@@ -58,6 +77,26 @@
   padding-left: 4px;
 }
 
-li::before {
+.faded {
+  opacity: 0.75;
+}
+
+.rule-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rule-li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.rule-li::before {
+  content: "• ";
+  font-size: 1em;
+  padding-right: 1.1225em;
+  position: relative;
+  top: 0;
   color: #FF6E2C;
 }

@@ -18,46 +18,44 @@ class Event extends React.Component {
      * the user has already registered to the event and display the
      * register button accordingly
      */
-    return <div className= "container">
-    <div className = "wrapper">
-    <div className = "event-info">
-      <img src="300.png" alt=""></img>
-      <div>
-        <h3 className= "contacts">Contacts:</h3>
-        <ul>
-          {Object.keys(event.contact).map(role => <div key={role}>
-            <b>{role}</b>: {event.contact[role].name} ({event.contact[role].phone})
-          </div>)}
-        </ul>
-      </div>
-      <div><b>Team size</b>: {event['team-size']}</div>
-      </div>
-
-        <div className = "event-description">
-          <h2>{event.name}</h2>
-          <div className = "butt">
-            <div>{this.props.user ? <button className= "register"
-              onClick={() => isRegistered ? this.props.unregisterFromEvent(event) : this.props.registerToEvent(event)}>
-              {isRegistered ? 'Unregister' : 'Register'}</button> : 'Please log in to register!'}</div>
-              <div className = "space"></div>
-              <div>{this.props.user ? <button className = "go-back"
-              onClick={() => isRegistered ? this.props.unregisterFromEvent(event) : this.props.registerToEvent(event)}>
-              {isRegistered ? 'Unregister' : 'Register'}</button> : 'Please log in to register!'}</div>
+    return <div className="uk-container uk-margin-large-top">
+      <div uk-grid="true" className="uk-grid-large uk-child-width-expand@s">
+        <div className={'uk-width-1-2@s'}>
+          <img src="/fest-logo.png" alt=""></img>
+          <div className="uk-margin-large-top uk-flex uk-flex-center butt">
+            <div>{this.props.user ? (
+                isRegistered ? <button className="unregister" onClick={() => this.props.unregisterFromEvent(event)}>Unegister</button> :
+                  <button className="register" onClick={() => this.props.registerToEvent(event)}>Register</button>) :
+              'Please log in to register!'}
+            </div>
+            <button className="uk-margin-left go-back" onClick={() => this.props.history.push('/')}> BACK TO EVENTS </button>
           </div>
-          <p>{event.description}</p>
-          <div>
-            <div><b>Start time</b>: {event['start-time']}</div>
-            <div><b>End time</b>: {event['end-time']}</div>
+        </div>
+        <div className={'uk-width-1-2@s'}>
+          <div style={{color: 'white', fontWeight: '800', fontSize: '28px'}}>{event.name}</div>
+          <div className={'primary-color uk-margin-top'}>PRIZE WORTH: <b>{event['prize-worth']}</b></div>
+          <div className={'primary-color uk-margin-small-top'}>TEAM SIZE: <b>{event['team-size']}</b></div>
+          <div className={'primary-color uk-margin-small-top'}><b>{event['start-time']} - {event['end-time']}</b></div>
+          <div className={'uk-margin-large-top'}>
+            <span className="contacts">Contacts:</span>
+            <div className={'uk-margin-top'}>
+              {Object.keys(event.contact).map(role => <div className={'uk-flex uk-flex-between'} key={role}>
+                <div>{event.contact[role].name}</div>
+                <div className={'primary-color'}>{event.contact[role].phone}</div>
+              </div>)}
+            </div>
           </div>
-          <div className = "rules"><b><h3 className= "header-rules">Rules</h3></b>
-            <ul>
-              {event.rules.map((rule, idx) => <li key={idx}>{rule}</li>)}
+          <p className={'uk-margin-large-top faded'}>{event.description}</p>
+          <div className="uk-margin-large-top rules">
+            <div className="contacts">Rules</div>
+            <ul className={'rule-ul'}>
+              {event.rules.map((rule, idx) => <li className={'uk-margin-small-top faded rule-li'} key={idx}>{rule}</li>)}
             </ul>
           </div>
 
         </div>
       </div>
-      </div>
+    </div>
   }
 }
 
