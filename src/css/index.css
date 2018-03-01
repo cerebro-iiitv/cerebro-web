@@ -29,18 +29,16 @@ html, body {
 }
 
 .user-img {
-	height: 50px;
-	width: 50px;
+	height: 100px;
+	width: 100px;
 }
 
 .user-name {
-	margin-left: 30px;
-	align-self: center;
+	margin-left: 10px;
 }
 
 .update-mobile {
 	display: flex;
-	justify-content: space-around;
 }
 
 .dashboard-user-content {

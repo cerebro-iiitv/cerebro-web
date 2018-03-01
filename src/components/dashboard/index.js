@@ -24,14 +24,23 @@ class Dashboard extends React.Component {
     let userRegisteredEvents = this.props.events.filter(
       event => _.some(Object.keys(event.participants), uid => uid === this.props.user.uid));
 
-    return <div className="dashboard">
-      <div className="user-details">
-        {this.props.user && <img className={'uk-border-circle user-img'} src={this.props.user.photoURL} alt={'User'}/>}
-        <div className="dashboard-user-content">
-          <div className="user-name">{this.props.user ? this.props.user.displayName : 'human'}.</div>
-          <p><b>Mobile: </b>{this.props.userPhone}</p>
-          <button className="uk-button uk-button-secondary" onClick={() => firebase.auth().signOut()}>Sign out</button>
+    return <div className="dashboard uk-container">
+      <div uk-grid="true" className="uk-grid-large uk-child-width-expand@s uk-text-center">
+        <div>
+          <div className={'uk-flex'}>
+            {this.props.user && <img className={'uk-border-circle user-img'} src={this.props.user.photoURL} alt={'User'}/>}
+            <div className={'uk-flex uk-flex-column uk-text-left uk-flex-center'}>
+              <div className="user-name">{this.props.user ? this.props.user.displayName : 'human.'}</div>
+              <div className={'user-name'}><b>Mobile: </b>{this.props.userPhone}</div>
+            </div>
+          </div>
         </div>
+        <div>
+          <div className="">
+            <button className="uk-button uk-button-secondary" onClick={() => firebase.auth().signOut()}>Sign out</button>
+          </div>
+        </div>
+
       </div>
       <h3>Registered Events</h3>
       <table className="uk-table uk-table-middle uk-table-divider">
