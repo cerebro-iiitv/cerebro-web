@@ -19,22 +19,23 @@ class Footer extends Component {
 			    <div className="uk-card uk-card-body uk-margin-left">
 				    <div className="links-section">
 				    	<h4 className="section-title">Links</h4>
-				    	<div className="footer-links">Home</div>
-				    	<div className="footer-links">Dashboard</div>
-				    	<div className="footer-links">Timeline</div>
-				    	<div className="footer-links">Institute Site</div>
-				    	<div className="footer-links">About</div>
+				    	<a href="/home"><div className="footer-links">Home</div></a>
+				    	<a href="/dashboard"><div className="footer-links">Dashboard</div></a>
+				    	<a href="/timeline"><div className="footer-links">Timeline</div></a>
+				    	<a href="http://iiitvadodara.ac.in/"><div className="footer-links">Institute Site</div></a>
+				    	<a href="/about"><div className="footer-links">About</div></a>
 					</div>
 				</div>
 
 			    <div className="uk-card contact-section uk-card-body uk-margin-left">
 			    	<h4 className="section-title">Contact</h4>
 			    	<div className="icons">
-			    		<FaFacebook />
-			    		<FaInstagram />
-			    		<FaGithub />
-			    		<FaPhone />
+			    		<a href=""><div class="single-icon"> <FaFacebook /></div></a>
+			    		<a href=""><div class="single-icon"><FaInstagram /></div></a>
+			    		<a href=""><div class="single-icon"><FaGithub /></div></a>
 			    	</div>
+			    	<div>Email: cerebro.iiitv@gmail.com</div>
+			    	<div>Address: c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat - 382028</div>
 			    </div>
 			</div>
       </div>

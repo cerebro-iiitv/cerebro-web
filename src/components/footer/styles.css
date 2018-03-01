@@ -24,6 +24,7 @@
 	border-bottom: 1px dashed #FF6E2C;
 	margin-bottom: 4px;
 	width: fit-content;
+	color: white;
 }
 
 .section-title {
@@ -34,5 +35,11 @@
 
 .icons {
 	display: flex;
-	justify-content: space-around;
+}
+
+.single-icon {
+	size: 10px;
+	padding-left: 15px;
+	font-size: x-large;
+	color: #FF6E2C;
 }
