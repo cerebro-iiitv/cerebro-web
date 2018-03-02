@@ -37,12 +37,13 @@ class Event extends React.Component {
           <div style={{color: 'white', fontWeight: '800', fontSize: '28px'}}>{event.name}</div>
           <div className={'primary-color uk-margin-top'}>PRIZE WORTH: <b>{event['prize-worth']}</b></div>
           <div className={'primary-color uk-margin-small-top'}>TEAM SIZE: <b>{event['team-size']}</b></div>
+          <div className={'primary-color uk-margin-small-top'}>VENUE: <b>{event['venue']}</b></div>
           <div className={'primary-color uk-margin-small-top'}><b>{event['start-time']} - {event['end-time']}</b></div>
           <div className={'uk-margin-large-top'}>
             <span className="contacts">Contacts:</span>
             <div className={'uk-margin-top'}>
               {Object.keys(event.contact).map(role => <div className={'uk-flex uk-flex-between'} key={role}>
-                <div>{event.contact[role].name}</div>
+                <div>{event.contact[role].name} ({event.contact[role].role})</div>
                 <div className={'primary-color'}>{event.contact[role].phone}</div>
               </div>)}
             </div>
