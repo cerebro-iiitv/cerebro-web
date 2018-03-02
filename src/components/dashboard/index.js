@@ -60,7 +60,7 @@ class Dashboard extends React.Component {
           <tr key={event.id}>
             <td>{event.id}</td>
             <td>{event.name}</td>
-            <td>-</td>
+            <td>{event["start-time"]}</td>
             <td>
               <button className="uk-button uk-button-secondary primary-color primary-color-border uk-button-small"
                       onClick={() => this.props.unregisterFromEvent(event)}>Unregister
