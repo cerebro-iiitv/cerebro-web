@@ -60,8 +60,9 @@ class Footer extends Component {
                 <div className="single-icon"><FaGithub/></div>
               </a>
             </div>
-            <div>Email: cerebro.iiitv@gmail.com</div>
-            <div>Address: c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat - 382028</div>
+            <div><span className="primary-color">Email:</span> cerebro.iiitv@gmail.com</div>
+            <div><span className="primary-color">Phone:</span>+918318741607(Neelansh Sahai)</div>
+            <div><span className="primary-color">Address:</span> c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat - 382028</div>
           </div>
         </div>
       </div>
