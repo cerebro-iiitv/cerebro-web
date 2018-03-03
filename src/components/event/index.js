@@ -29,7 +29,7 @@ class Event extends React.Component {
           <div className="uk-margin-large-top uk-flex uk-flex-center butt">
             <div>{this.props.user ? (
                 isRegistered ? <button className="unregister"
-                                       onClick={() => this.props.unregisterFromEvent(event)}>Unegister</button> :
+                                       onClick={() => this.props.unregisterFromEvent(event)}>Unregister</button> :
                   <button className="register" onClick={() => this.props.registerToEvent(event)}>Register</button>) :
               'Please log in to register!'}
             </div>
