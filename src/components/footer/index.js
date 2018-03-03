@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {FaFacebook, FaGithub, FaInstagram} from 'react-icons/lib/fa';
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaTwitter
+} from 'react-icons/lib/fa';
 
 import './styles.css';
 
@@ -47,6 +52,9 @@ class Footer extends Component {
               </a>
               <a href="https://www.instagram.com/cerebro.iiitv/">
                 <div className="single-icon"><FaInstagram/></div>
+              </a>
+              <a href="https://twitter.com/Cerebro_iiitv">
+                <div className="single-icon"><FaTwitter/></div>
               </a>
               <a href="http://github.com/cerebro-iiitv">
                 <div className="single-icon"><FaGithub/></div>
