@@ -8,7 +8,7 @@
 }
 
 .event-panel:hover {
-  box-shadow: 2px 4px 2px 2px rgba(255, 255, 255, 0.11);
+  border: 1px solid #FF6E2C;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
