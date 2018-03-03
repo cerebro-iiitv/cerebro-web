@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import _ from 'lodash';
 import * as firebase from 'firebase';
+import './dashboard.css';
 
 import {unregisterFromEvent} from "../../actions/eventActions";
 import {saveUserPhone} from "../../actions/userPhoneReducer";
