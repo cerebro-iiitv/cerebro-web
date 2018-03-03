@@ -5,6 +5,9 @@ import 'react-vertical-timeline-component/style.min.css';
 import './timeline.css';
 
 class Timeline extends React.Component {
+  componentDidMount() {
+    document.body.scrollTop = 0;
+  }
   render() {
     let events = this.props.event.events.slice();
     events.sort((a, b) => (Date.parse(a['start-time']) - Date.parse(b['start-time'])));

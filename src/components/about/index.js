@@ -5,6 +5,9 @@ import Team from '../team';
 import './styles.css';
 
 class About extends React.Component {
+  componentDidMount() {
+    document.body.scrollTop = 0;
+  }
   render() {
     return <div className={'uk-container'}>
       <div className={'uk-margin-large-top'}>

@@ -6,6 +6,9 @@ import Countdown from './Countdown';
 import EventList from './eventList';
 
 class Home extends React.Component {
+  componentDidMount() {
+    document.body.scrollTop = 0;
+  }
   render() {
     return <div>
       {/*<img className="absolute triangle" src="https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/triangle.png?alt=media&token=f3cbbbed-2d31-4201-a051-8d123d594156" alt=""/>*/}

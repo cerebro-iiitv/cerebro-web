@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import '../../css/EventDetail.css'
@@ -8,7 +7,7 @@ import {registerToEvent, unregisterFromEvent} from "../../actions/eventActions";
 
 class Event extends React.Component {
   componentDidMount() {
-     ReactDOM.findDOMNode(this).scrollIntoView();
+     document.body.scrollTo = 0;
   }
   render() {
     let eventId = this.props.match.params.id;

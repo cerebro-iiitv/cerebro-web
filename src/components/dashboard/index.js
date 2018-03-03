@@ -9,10 +9,11 @@ import {saveUserPhone} from "../../actions/userPhoneReducer";
 
 class Dashboard extends React.Component {
   componentDidMount() {
+    document.body.scrollTop = 0;
     this.mobileInput.addEventListener('keyup', event => {
       event.preventDefault();
       if (event.keyCode === 13) {
-        this.mobileInput.value.toString().length == 10 ? this.props.saveUserPhone(this.mobileInput.value): alert('Please enter a valid number');
+        this.mobileInput.value.toString().length === 10 ? this.props.saveUserPhone(this.mobileInput.value): alert('Please enter a valid number');
         this.mobileInput.value = '';
       }
     })
@@ -74,7 +75,7 @@ class Dashboard extends React.Component {
         <input ref={ref => this.mobileInput = ref} className="uk-input uk-form-width-medium" type="number"
                id={'phone-input'} placeholder={'Mobile'}/>
         <button className="uk-button uk-button-secondary uk-margin-left" onClick={() => {
-          this.mobileInput.value.toString().length == 10 ? this.props.saveUserPhone(this.mobileInput.value): alert('Please enter a valid number');
+          this.mobileInput.value.toString().length === 10 ? this.props.saveUserPhone(this.mobileInput.value): alert('Please enter a valid number');
           this.mobileInput.value = ''
         }}>Save
         </button>
