@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
     this.mobileInput.addEventListener('keyup', event => {
       event.preventDefault();
       if (event.keyCode === 13) {
-        this.props.saveUserPhone(this.mobileInput.value);
+        this.mobileInput.value.toString().length == 10 ? this.props.saveUserPhone(this.mobileInput.value): alert('Please enter a valid number');
         this.mobileInput.value = '';
       }
     })
@@ -71,10 +71,10 @@ class Dashboard extends React.Component {
         </tbody>
       </table>
       <div className="update-mobile">
-        <input ref={ref => this.mobileInput = ref} className="uk-input uk-form-width-medium" type={'phone'}
+        <input ref={ref => this.mobileInput = ref} className="uk-input uk-form-width-medium" type="number"
                id={'phone-input'} placeholder={'Mobile'}/>
         <button className="uk-button uk-button-secondary uk-margin-left" onClick={() => {
-          this.props.saveUserPhone(this.mobileInput.value);
+          this.mobileInput.value.toString().length == 10 ? this.props.saveUserPhone(this.mobileInput.value): alert('Please enter a valid number');
           this.mobileInput.value = ''
         }}>Save
         </button>
