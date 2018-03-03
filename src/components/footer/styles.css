@@ -21,25 +21,30 @@
 }
 
 .footer-links {
+  display: inline-block;
   border-bottom: 1px dashed #FF6E2C;
   margin-bottom: 4px;
-  width: fit-content;
+  /*width: fit-content;*/
   color: white;
 }
 
 .section-title {
   color: white;
+  padding-bottom:
+  0px;
   padding-left: 8px;
   border-left: 4px solid #FF6E2C;
 }
 
 .icons {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .single-icon {
   size: 10px;
   padding-left: 15px;
+  padding-top: 0px;
   font-size: x-large;
   color: #FF6E2C;
 }
@@ -47,3 +52,4 @@
 .links-section a {
   text-decoration: none;
 }
+

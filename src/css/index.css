@@ -1,3 +1,8 @@
+@font-face{
+  font-family: vidaloka;
+  src:url(https://fonts.googleapis.com/css?family=Vidaloka);
+}
+
 html, body {
   background: black;
   height: 100%;
@@ -50,6 +55,7 @@ html, body {
 
 .primary-color {
   color: #FF6E2C;
+  padding-bottom: 5px;
 }
 
 .primary-color-border {

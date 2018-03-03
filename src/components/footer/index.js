@@ -61,7 +61,7 @@ class Footer extends Component {
               </a>
             </div>
             <div><span className="primary-color">Email:</span> cerebro.iiitv@gmail.com</div>
-            <div><span className="primary-color">Phone:</span>+918318741607(Neelansh Sahai)</div>
+            <div><span className="primary-color">Phone:</span> +91-8318741607 (Neelansh Sahai)</div>
             <div><span className="primary-color">Address:</span> c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat - 382028</div>
           </div>
         </div>

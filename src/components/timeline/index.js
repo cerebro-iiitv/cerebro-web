@@ -12,7 +12,9 @@ class Timeline extends React.Component {
     let events = this.props.event.events.slice();
     events.sort((a, b) => (Date.parse(a['start-time']) - Date.parse(b['start-time'])));
     return <div>
+    <h3 className="tl-title">TIMELINE</h3>
       <VerticalTimeline>
+
         {events.map(event =>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"

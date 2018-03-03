@@ -1,5 +1,8 @@
+
+
 .vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline-element-content {
   color: #FF6E2C;
+  font-family: Vidaloka;
 }
 
 .vertical-timeline-element-content p {
@@ -20,4 +23,37 @@
 
 .vertical-timeline-element-date {
   color: #FF6E2C;
+}
+
+.tl-title{
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #FF6E2C;
+  font-family: Vidaloka;
+}
+
+/*.vertical-timeline-element-icon{
+	width: 20px;
+	height: 20px;
+	top: 10px;
+    position: absolute;
+    left: 2
+	border-radius: 50%;
+	color: #ff6e2c;
+}*/
+@media only screen and (min-width: 1170px)
+
+{
+.vertical-timeline-element-icon {
+    width: 29px !important;
+    height: 29px !important;
+    left: 51.4% !important;
+    margin-left: -30px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
 }
