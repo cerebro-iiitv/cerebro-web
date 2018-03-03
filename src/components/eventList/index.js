@@ -8,7 +8,7 @@ class EventList extends React.Component {
 
   render() {
     return (
-      <div className={'uk-container'}>
+      <div className={'uk-container event-list'}>
         <div className={'uk-text-center uk-margin-large-bottom'}>
           <span className={'event-list-heading'}>EVENTS</span>
         </div>

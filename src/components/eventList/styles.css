@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
 .event-list-heading {
   font-size: 25px;
   margin-bottom: 5px;
   border-bottom: 2px solid #FF6E2C;
+}
+
+.start-button {
+	margin-top: 30px;
+	font-size: 24px;
+	font-family: 'Slabo 27px', serif;
+	z-index: 1;
+}
+
+.start-button:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+	transition: all 0.2s;
 }
