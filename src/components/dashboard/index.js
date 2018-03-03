@@ -57,9 +57,9 @@ class Dashboard extends React.Component {
         </tr>
         </thead>
         <tbody>
-        {userRegisteredEvents.map(event =>
+        {userRegisteredEvents.map((event, index) =>
           <tr key={event.id}>
-            <td>{event.id}</td>
+            <td>{index+1}</td>
             <td>{event.name}</td>
             <td>{event["start-time"]}</td>
             <td>
