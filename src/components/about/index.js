@@ -16,8 +16,8 @@ class About extends React.Component {
           Management Institute, Gujarat State Fertilizers and Chemicals Ltd. and Tata Consultancy Services.</p>
         <p><span className={'primary-color'}>Cerebro</span> is the <span className={'primary-color'}>Annual Technical Festival</span> of
           Indian Institute of Information Technology, Vadodara held in <span className={'primary-color'}>March</span>.
-          It is entirely organized by the <span className={'primary-color'}>Technical Society of IIIT, Vadodara </span>
-          and services as a platform for technofiles to showcase their creativity and intelligence. The festival aims to
+          It is entirely organized by the <span className={'primary-color'}>Technical Society of IIIT, Vadodara</span>
+           and services as a platform for technofiles to showcase their creativity and intelligence. The festival aims to
           bring together great minds through various activities like <span className={'primary-color'}>Technical Workshops, events, talks</span> and <span
             className={'primary-color'}>exhibitions</span>.</p>
       </div>
