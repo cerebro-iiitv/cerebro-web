@@ -26,8 +26,7 @@ class Panel extends React.Component {
 
     let dateString;
     if (!isNaN(date.getTime())) {
-      dateString = 'MAR ' + date.getDate() + ', ' + (date.getHours() % 12 < 10 ? '0'
-        + date.getHours() % 12 : date.getHours() % 12) + ':' + (date.getMinutes() < 10 ? '0'
+      dateString = 'MAR ' + date.getDate() + ', ' + (date.getHours() <= 12 ? date.getHours() : date.getHours() % 12) + ':' + (date.getMinutes() < 10 ? '0'
         + date.getMinutes() : date.getMinutes()) + ' ' + (date.getHours() >= 12 ? 'PM' : 'AM');
     }
 
