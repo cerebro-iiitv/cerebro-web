@@ -3,3 +3,14 @@
   border-left: 4px solid #FF6E2C;
   font-size: xx-large;
 }
+.uk-container {
+  padding-left: 15% !important;
+  padding-right: 15% !important;
+}
+
+@media screen and (min-width: 1120px) {
+
+  .uk-width-1-5\@l {
+    width: 25% !important;
+  }
+}

@@ -18,11 +18,16 @@ class Footer extends Component {
           height: '1px',
           backgroundColor: 'white',
         }}/>
+        <div className="festnew-logo fest-mob">
+          <img src= './fest-logo.png' alt="IIIT Vadodara" className="img-responsive" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/website.png?alt=media&amp;token=5a13225c-3b8d-49a4-a8ac-7e6de9451857"
+               alt="IIIT Vadodara" class="img-responsive" className="foot-int"/>
+        </div>
         <div className="uk-flex uk-flex-center footer">
           <div className="uk-card uk-card-body fest-logo">
-            <img src="/fest-logo.png" alt=""/>
+            <img src='https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/website.png?alt=media&token=5a13225c-3b8d-49a4-a8ac-7e6de9451857'  className="foot-int-logo" alt="" />
+            <img src='./fest-logo.png' alt="" className="foot-fest-logo"/>
           </div>
-
           <div className="uk-card uk-card-body uk-margin-left">
             <div className="links-section">
               <h4 className="section-title">Links</h4>
@@ -64,7 +69,10 @@ class Footer extends Component {
             <div><span className="primary-color">Phone:</span> +91-8318741607 (Neelansh Sahai)</div>
             <div><span className="primary-color">Address:</span> c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat - 382028</div>
           </div>
+
+
         </div>
+
       </div>
     )
   }

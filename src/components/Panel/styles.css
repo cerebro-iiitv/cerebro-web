@@ -31,6 +31,7 @@
   padding: 9px 17px;
   cursor: pointer;
   white-space: nowrap;
+  margin-left: -19px;
 }
 
 .uk-card-title {
@@ -42,20 +43,25 @@
 
 .panel-unregister {
   background-color: white;
-  padding: 8px 10px;
+  padding: 8px 8px;
   cursor: pointer;
   white-space: nowrap;
   color: #FF6E2C;
+  margin-left: -20px;
 }
 
 .panel-more {
   border: 1px solid #FF6E2C;
-  padding: 8px 10px;
+  padding: 8px 5px;
   cursor: pointer;
   white-space: nowrap;
+  margin-left: 8px;
 }
 
 .panel-buttons {
   display: flex;
   justify-content: space-between;
+}
+.uk-card.uk-card-body.event-panel {
+    padding: 30px 30px !important;
 }
