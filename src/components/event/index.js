@@ -32,7 +32,7 @@ class Event extends React.Component {
                   <button className="register" onClick={() => this.props.registerToEvent(event)}>Register</button>) :
               'Please log in to register!'}
             </div>
-            <button className="uk-margin-left go-back" onClick={() => this.props.history.push('/')}> BACK TO EVENTS
+            <button className="uk-margin-left go-back" onClick={() => this.props.history.push('/')}> Back to Events
             </button>
           </div>
         </div>
@@ -41,7 +41,8 @@ class Event extends React.Component {
           <div className={'primary-color uk-margin-top'}>PRIZE WORTH: <b>{event['prize-worth']}</b></div>
           <div className={'primary-color uk-margin-small-top'}>TEAM SIZE: <b>{event['team-size']}</b></div>
           <div className={'primary-color uk-margin-small-top'}>VENUE: <b>{event['venue']}</b></div>
-          <div className={'primary-color uk-margin-small-top'}><b>{event['start-time']} - {event['end-time']}</b></div>
+          <div className={'primary-color uk-margin-small-top'}>DATE: <b>{event['start-time'].slice(0,11)}</b></div>
+          <div className={'primary-color uk-margin-small-top'}>TIME: <b>{event['start-time'].slice(11)} - {event['end-time'].slice(11)}</b></div>
           <div className={'uk-margin-large-top'}>
             <span className="contacts">Contacts:</span>
             <div className={'uk-margin-top'}>
