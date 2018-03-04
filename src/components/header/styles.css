@@ -19,14 +19,20 @@
   visibility: hidden;
 }
 @media screen and (max-width: 560px) and (min-width: 320px) {
+  .uk-navbar {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    left: 13%;
+}
   .uk-navbar-center:not(:only-child) {
     position: absolute;
     top: 120%;
     left: 44%;
   }
   .firebaseui-idp-button.mdl-button.mdl-js-button.mdl-button--raised.firebaseui-idp-google.firebaseui-id-idp-button {
-    position: fixed;
-    left: 95%;
+    
+    left: 0%;
   }
   .countdown{
     height: calc(100vh - 175px);
