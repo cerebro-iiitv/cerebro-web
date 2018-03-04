@@ -19,9 +19,9 @@ class Footer extends Component {
           backgroundColor: 'white',
         }}/>
         <div className="festnew-logo fest-mob">
-          <img src= './fest-logo.png' alt="IIIT Vadodara" className="img-responsive" />
+          <img src= './fest-logo.png' alt="IIIT Vadodara" className="img-responsive festpic" />
           <img src="https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/website.png?alt=media&amp;token=5a13225c-3b8d-49a4-a8ac-7e6de9451857"
-               alt="IIIT Vadodara" className="img-responsive foot-int" />
+               alt="IIIT Vadodara" className="img-responsive foot-int fest_int_pic" />
         </div>
         <div className="uk-flex uk-flex-center footer">
           <div className="uk-card uk-card-body fest-logo">

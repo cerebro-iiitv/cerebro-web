@@ -57,3 +57,10 @@
     -webkit-backface-visibility: hidden;
 }
 }
+
+@media screen and (max-width: 560px) and (min-width: 320px) {
+
+.vertical-timeline-element-content::before {
+    border-left-color: transparent;
+}
+}

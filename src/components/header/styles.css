@@ -13,16 +13,16 @@
 
 
 .institute-logo {
-	width: 30%;
-	margin-top: 0.5em;
-	margin-left: 0.5%;
+  width: 30%;
+  margin-top: 0.5em;
+  margin-left: 0.5%;
   visibility: hidden;
 }
 @media screen and (max-width: 560px) and (min-width: 320px) {
   .uk-navbar-center:not(:only-child) {
     position: absolute;
     top: 120%;
-    left: 35%;
+    left: 44%;
   }
   .firebaseui-idp-button.mdl-button.mdl-js-button.mdl-button--raised.firebaseui-idp-google.firebaseui-id-idp-button {
     position: fixed;
@@ -30,6 +30,11 @@
   }
   .countdown{
     height: calc(100vh - 175px);
+  }
+  .uk-navbar-item, .uk-navbar-nav > li > a, .uk-navbar-toggle {
+
+    padding: 0px 9px;
+
   }
 }
 
