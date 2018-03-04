@@ -20,6 +20,11 @@ class Dashboard extends React.Component {
     })
   }
 
+  handleUnregister(event) {
+    this.props.unregisterFromEvent(event);
+    alert(`You have successfully unregistered from ${event.name}`);
+  }
+
   render() {
     if (!this.props.user) {
       return <Redirect to={'/'}/>
@@ -65,7 +70,7 @@ class Dashboard extends React.Component {
             <td>{event["start-time"]}</td>
             <td>
               <button className="uk-button uk-button-secondary primary-color primary-color-border uk-button-small"
-                      onClick={() => this.props.unregisterFromEvent(event)}>Unregister
+                      onClick={() => this.handleUnregister(event)}>Unregister
               </button>
             </td>
           </tr>

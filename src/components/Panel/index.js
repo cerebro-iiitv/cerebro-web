@@ -16,8 +16,10 @@ class Panel extends React.Component {
 
     if (isRegistered) {
       this.props.unregisterFromEvent(this.props.event);
+      alert(`You have successfully unregistered from ${this.props.event.name}`);
     } else {
       this.props.registerToEvent(this.props.event);
+      alert(`You have successfully registered for ${this.props.event.name}`);
     }
   }
 
