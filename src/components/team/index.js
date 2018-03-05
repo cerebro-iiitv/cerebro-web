@@ -1,9 +1,10 @@
 import React from 'react';
 import {FaFacebook, FaGithub, FaLinkedin, FaTwitter} from 'react-icons/lib/fa';
+import "./team.css";
 
 class Team extends React.Component {
   render() {
-    return <div>
+    return <div className="team-section">
       <div uk-grid="true" className={'uk-grid-large uk-child-width-expand@s'}>
         {this.props.team.members.map((member, idx) => <div
           className={'uk-width-1-3@s uk-width-1-4@m uk-width-1-5@l uk-margin-large-top uk-text-center'} key={idx}>
@@ -23,9 +24,10 @@ class Team extends React.Component {
             <a href={member.links.twitter} target={'_blank'} className={'uk-margin-right team-ext'}><FaTwitter/></a>}
             {member.links.facebook &&
             <a href={member.links.facebook} target={'_blank'} className={'uk-margin-right team-ext'}><FaFacebook/></a>}
+
           </div>
         </div>)}
-      </div>
+      </div><hr className="separator"/>
     </div>
   }
 }
