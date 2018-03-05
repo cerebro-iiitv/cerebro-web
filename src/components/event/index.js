@@ -24,7 +24,7 @@ class Event extends React.Component {
     return <div className="uk-container uk-margin-large-top">
       <div uk-grid="true" className="uk-grid-large uk-child-width-expand@s">
         <div className={'uk-width-1-2@s'}>
-          <img src="/fest-logo.png" alt=""></img>
+          <img src={event.img ? event.img: "/fest-logo.png"} alt=""></img>
           <div className="uk-margin-large-top uk-flex uk-flex-center butt">
             <div>{this.props.user ? (
                 isRegistered ? <button className="unregister"
