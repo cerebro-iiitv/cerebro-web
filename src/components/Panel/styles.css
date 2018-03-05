@@ -65,3 +65,13 @@
 .uk-card.uk-card-body.event-panel {
   padding: 30px 30px !important;
 }
+
+.panel-img-container {
+  display: flex;
+  justify-content: center;
+  height: 111px;
+}
+
+.panel-img {
+  object-fit: contain;
+}
