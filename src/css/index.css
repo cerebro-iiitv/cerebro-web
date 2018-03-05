@@ -145,3 +145,7 @@ canvas {
   margin-top: -30px;
 }
 }
+
+div#root {
+    border: 3px solid #ff6e2c;
+}
