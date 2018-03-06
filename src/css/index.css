@@ -143,5 +143,9 @@ canvas {
 @media screen and (max-width: 560px) and (min-width: 320px) {
   .firebaseui-idp-google>.firebaseui-idp-text:after {
   margin-top: -30px;
+  }
 }
+
+div#root {
+    border: 3px solid #ff6e2c;
 }
