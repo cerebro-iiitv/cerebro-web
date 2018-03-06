@@ -57,7 +57,7 @@ class Event extends React.Component {
             <div className="contacts">Rules</div>
             <ul className={'rule-ul'}>
               {event.rules.map((rule, idx) => <li className={'uk-margin-small-top faded rule-li'}
-                                                  key={idx}>{rule}</li>)}
+                                                  key={idx} dangerouslySetInnerHTML={{__html: rule}}/>)}
             </ul>
           </div>
 
