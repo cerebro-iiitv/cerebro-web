@@ -33,7 +33,7 @@ class Countdown extends Component {
             <div className="uk-countdown-label uk-text-center uk-visible@s">SECS</div>
           </div>
         </div>
-        <div className="start-button" onClick={this.handleStartClick}>Scroll Down!</div>
+        <div className="start-button" onClick={this.handleStartClick}>SCROLL DOWN</div>
       </div>
     )
   }

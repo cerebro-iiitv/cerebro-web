@@ -8,14 +8,12 @@
 
 .start-button {
 	margin-top: 30px;
-	font-size: 24px;
-	font-family: 'Slabo 27px', serif;
+	font-size: 12px;
+	font-family: 'Roboto Mono', monospace;
 	z-index: 1;
 }
 
 .start-button:hover {
 	cursor: pointer;
-	transform: scale(1.2);
-	transition: all 0.2s;
 }
 

@@ -26,7 +26,6 @@
   background-color: black;
 }
 @media screen and (max-width: 560px) and (min-width: 320px) {
-
   .firebaseui-idp-button.mdl-button.mdl-js-button.mdl-button--raised.firebaseui-idp-google.firebaseui-id-idp-button {
     position: fixed;
     left: 95%;
