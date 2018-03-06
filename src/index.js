@@ -6,7 +6,7 @@ import Icons from 'uikit/dist/js/uikit-icons';
 import UIKit from 'uikit';
 import * as firebase from 'firebase';
 
-import registerServiceWorker from './registerServiceWorker';
+import {unregister as unregisterServiceWorker} from './registerServiceWorker';
 import {getState, getStore} from "./store";
 import 'uikit/dist/css/uikit.min.css'
 import './css/index.css';
@@ -58,4 +58,4 @@ ReactDOM.render(
     </BrowserRouter>
   </Provider>,
   document.getElementById('root'));
-registerServiceWorker();
+unregisterServiceWorker();
