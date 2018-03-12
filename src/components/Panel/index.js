@@ -46,8 +46,8 @@ class Panel extends React.Component {
         <p className={'uk-text-left panel-content'}>{this.props.event.description}</p>
         <p className={'panel-buttons'}>
           {this.props.user && (isRegistered ?
-            <span className={'panel-unregister'} onClick={this.handleRegister.bind(this)}>Unregister</span> :
-            <span className={'panel-register'} onClick={this.handleRegister.bind(this)}>Register</span>)
+            <span className={'panel-unregister'}  onclick='return false;'>Unregister</span> :
+            <span className={'panel-register'}  onclick='return false;'>Register</span>)
           }
           <span className={'panel-more'} onClick={this.navigateToEvent.bind(this)}>View Details</span>
         </p>
