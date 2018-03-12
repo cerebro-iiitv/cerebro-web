@@ -38,3 +38,8 @@
     width: 275px;
   }
 }
+
+.next-year {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}

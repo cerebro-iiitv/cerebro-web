@@ -9,8 +9,8 @@ class Countdown extends Component {
     return (
       <div className="countdown">
         <img className={'uk-margin-large-bottom cerebro-hero'} src='./fest-logo.png' alt=""/>
-        <hr style={{width: '260px'}}/>
-        <span className="countdown-header">LIVE NOW</span>
+        {/*<hr style={{width: '260px'}}/>
+        /*<span className="countdown-header">LIVE NOW</span>
         <div className="uk-grid-small uk-child-width-auto timer" uk-grid="true"
              uk-countdown="date: 2018-03-10T09:00:00+05:30">
           <div>
@@ -32,7 +32,8 @@ class Countdown extends Component {
             <div className="uk-countdown-number uk-countdown-seconds"></div>
             <div className="uk-countdown-label uk-text-center uk-visible@s">SECS</div>
           </div>
-        </div>
+        </div>*/}
+        <div className="next-year">SEE YOU NEXT YEAR!</div>
       </div>
     )
   }
