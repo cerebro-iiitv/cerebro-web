@@ -10,6 +10,8 @@ class EventList extends React.Component {
     return (
       <div className={'uk-container event-list'}>
         <div className={'uk-text-center uk-margin-large-bottom'}>
+          <span className={'event-list-heading'}>PAST</span>
+          {' '}
           <span className={'event-list-heading'}>EVENTS</span>
         </div>
         <div uk-grid="true" className={'uk-grid-large uk-child-width-expand@s'}>

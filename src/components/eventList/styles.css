@@ -17,3 +17,12 @@
 	cursor: pointer;
 }
 
+.timer {
+	font-size: 25px;
+}
+
+.uk-grid-small > * {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
