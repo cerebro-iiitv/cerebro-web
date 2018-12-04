@@ -24,13 +24,13 @@ class Panel extends React.Component {
   }
 
   render() {
-    let date = new Date(this.props.event['start-time']);
+    // let date = new Date(this.props.event['start-time']);
 
-    let dateString;
-    if (!isNaN(date.getTime())) {
-      dateString = 'MAR ' + date.getDate() + ', ' + (date.getHours() <= 12 ? date.getHours() : date.getHours() % 12) + ':' + (date.getMinutes() < 10 ? '0'
-        + date.getMinutes() : date.getMinutes()) + ' ' + (date.getHours() >= 12 ? 'PM' : 'AM');
-    }
+    // let dateString;
+    // if (!isNaN(date.getTime())) {
+    //   dateString = 'MAR ' + date.getDate() + ', ' + (date.getHours() <= 12 ? date.getHours() : date.getHours() % 12) + ':' + (date.getMinutes() < 10 ? '0'
+    //     + date.getMinutes() : date.getMinutes()) + ' ' + (date.getHours() >= 12 ? 'PM' : 'AM');
+    // }
 
     let isRegistered = this.props.user && _.some(Object.keys(this.props.event.participants), uid => uid === this.props.user.uid);
 
@@ -40,9 +40,10 @@ class Panel extends React.Component {
           <img src={this.props.event.img || './fest-logo.png'} className={'uk-margin-bottom panel-img'} alt=""/>
         </div>
         <h3 className="uk-card-title white">{this.props.event.name}</h3>
-        <p className={'uk-text-left panel-team-size primary-color'}>TEAM SIZE: <b>{this.props.event['team-size']}</b>
-        </p>
-        <p className={'uk-text-left panel-team-size primary-color'}>{dateString}</p>
+        {/* <p className={'uk-text-left panel-team-size primary-color'}>TEAM SIZE: <b>{this.props.event['team-size']}</b>
+        </p> */}
+        {/* <p className={'uk-text-left panel-team-size primary-color'}>{dateString}</p> */}
+        <p className={'uk-text-left panel-team-size primary-color'}>Details will be updated soon!</p>
         <p className={'uk-text-left panel-content'}>{this.props.event.description}</p>
         <p className={'panel-buttons'}>
           {this.props.user && (isRegistered ?
