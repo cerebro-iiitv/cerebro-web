@@ -12,7 +12,7 @@ class Countdown extends Component {
         {/*<hr style={{width: '260px'}}/>
         <span className="countdown-header">LIVE NOW</span>*/}
         <div className="uk-grid-small uk-child-width-auto timer" uk-grid="true"
-             uk-countdown="date: 2019-02-23T09:00:00+05:30">
+             uk-countdown="date: 2019-03-02T09:00:00+05:30">
           <div>
             <div className="uk-countdown-number uk-countdown-days"></div>
             <div className="uk-countdown-label uk-text-center uk-visible@s">DAYS</div>

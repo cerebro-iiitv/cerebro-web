@@ -78,7 +78,7 @@ class Dashboard extends React.Component {
         </tbody>
       </table>
       <div className="update-mobile">
-        <input ref={ref => this.mobileInput = ref} className="uk-input uk-form-width-medium" type="number"
+        <input ref={ref => this.mobileInput = ref} className="uk-input uk-form-width-medium" type="tel"
                id={'phone-input'} placeholder={'Mobile'}/>
         <button className="uk-button uk-button-secondary uk-margin-left" onClick={() => {
           this.mobileInput.value.toString().length === 10 ? this.props.saveUserPhone(this.mobileInput.value): alert('Please enter a valid number');
