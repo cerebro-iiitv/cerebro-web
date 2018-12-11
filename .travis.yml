@@ -6,15 +6,13 @@ cache:
   directories:
   - node_modules
 before_install:
-  - npm install -g firebase-tools
-  - npm install -g yarn
+  - npm install -g yarn firebase-tools
 install:
   - yarn
 script:
   - yarn build
 
 after_success:
-  - travis_wait 40 npm run build
   - firebase use default --token $FIREBASE_TOKEN
   - travis_wait firebase deploy -m "Travis auto-deploy PR ${TRAVIS_PULL_REQUEST}" --non-interactive --token $FIREBASE_TOKEN
 
