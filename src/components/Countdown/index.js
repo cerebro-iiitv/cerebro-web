@@ -15,22 +15,22 @@ class Countdown extends Component {
              uk-countdown="date: 2019-03-02T09:00:00+05:30">
           <div>
             <div className="uk-countdown-number uk-countdown-days"></div>
-            <div className="uk-countdown-label uk-text-center uk-visible@s">DAYS</div>
+            <div className="uk-countdown-label uk-text-center">DAYS</div>
           </div>
           <div className="uk-countdown-separator">:</div>
           <div>
             <div className="uk-countdown-number uk-countdown-hours"></div>
-            <div className="uk-countdown-label uk-text-center uk-visible@s">HRS</div>
+            <div className="uk-countdown-label uk-text-center">HRS</div>
           </div>
           <div className="uk-countdown-separator">:</div>
           <div>
             <div className="uk-countdown-number uk-countdown-minutes"></div>
-            <div className="uk-countdown-label uk-text-center uk-visible@s">MINS</div>
+            <div className="uk-countdown-label uk-text-center">MINS</div>
           </div>
           <div className="uk-countdown-separator">:</div>
           <div>
             <div className="uk-countdown-number uk-countdown-seconds"></div>
-            <div className="uk-countdown-label uk-text-center uk-visible@s">SECS</div>
+            <div className="uk-countdown-label uk-text-center">SECS</div>
           </div>
         </div>
         {/* <div className="next-year">SEE YOU NEXT YEAR!</div> */}
