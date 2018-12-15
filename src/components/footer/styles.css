@@ -11,6 +11,16 @@
   width: 25vw;
 }
 
+.white-link {
+  color: antiquewhite;
+}
+
+.white-link:hover {
+  border-bottom: 1px dashed #FF6E2C;
+  text-decoration: none;
+  color: white;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;

@@ -21,7 +21,7 @@ class Footer extends Component {
         <div className="festnew-logo fest-mob">
           <img src= './fest-logo.png' alt="IIIT Vadodara" className="img-responsive festpic" />
           <img src="https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/website.png?alt=media&amp;token=5a13225c-3b8d-49a4-a8ac-7e6de9451857"
-               alt="IIIT Vadodara" className="img-responsive foot-int fest_int_pic" />
+               alt="IIIT Vadodara" className="img-responsive foot-int" />
         </div>
         <div className="uk-flex uk-flex-center footer">
           <div className="uk-card uk-card-body fest-logo">
@@ -65,9 +65,22 @@ class Footer extends Component {
                 <div className="single-icon"><FaGithub/></div>
               </a>
             </div>
-            <div><span className="primary-color">Email:</span> cerebro.iiitv@gmail.com</div>
-            <div><span className="primary-color">Phone:</span> +91-8318741607 (Neelansh Sahai)</div>
-            <div><span className="primary-color">Address:</span> c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat - 382028</div>
+            <div>
+              <span className="primary-color">Email: </span>
+              <a href="mailto:cerebro.iiitv@gmail.com" className="white-link">cerebro.iiitv@gmail.com</a>
+            </div>
+            <div>
+              <span className="primary-color">Phone: </span>
+              <a href="tel:+919370645038" className="white-link">+91-9370645038</a>
+            </div>
+            <div>
+              <span className="primary-color">WhatsApp: </span>
+              <a href="https://wa.me/917737253979" className="white-link">+91-7737253979</a>
+            </div>
+            <div>
+              <span className="primary-color">Address: </span> 
+              <a href="https://goo.gl/maps/7g5D6XJpMAD2" className="white-link">c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat-382028</a>
+            </div>
           </div>
 
 
