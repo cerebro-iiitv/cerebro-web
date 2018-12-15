@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "cerebro-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
     "react-vertical-timeline-component": "^2.0.5",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "uikit": "^3.0.0-beta.40"
+    "uikit": "^3.0.0-rc.25"
   },
   "scripts": {
     "start": "react-scripts start",

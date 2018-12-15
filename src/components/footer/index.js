@@ -19,15 +19,16 @@ class Footer extends Component {
           backgroundColor: 'white',
         }}/>
         <div className="festnew-logo fest-mob">
-          <img src= './fest-logo.png' alt="IIIT Vadodara" className="img-responsive festpic" />
+          <img src= './fest-logo.png' alt="IIIT Vadodara" className="img-fluid festpic" />
           <img src="https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/website.png?alt=media&amp;token=5a13225c-3b8d-49a4-a8ac-7e6de9451857"
-               alt="IIIT Vadodara" className="img-responsive foot-int" />
+               alt="IIIT Vadodara" className="foot-int" />
         </div>
         <div className="uk-flex uk-flex-center footer">
           <div className="uk-card uk-card-body fest-logo">
-            <img src='https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/website.png?alt=media&token=5a13225c-3b8d-49a4-a8ac-7e6de9451857'  className="foot-int-logo" alt="" />
+            <img src='https://firebasestorage.googleapis.com/v0/b/cerebro-2018-f1052.appspot.com/o/website.png?alt=media&token=5a13225c-3b8d-49a4-a8ac-7e6de9451857' className="foot-int-logo" alt="" />
             <img src='./fest-logo.png' alt="" className="foot-fest-logo"/>
           </div>
+
           <div className="uk-card uk-card-body uk-margin-left">
             <div className="links-section">
               <h4 className="section-title">Links</h4>
@@ -82,10 +83,7 @@ class Footer extends Component {
               <a href="https://goo.gl/maps/7g5D6XJpMAD2" className="white-link">c/o Block No.9, Government Engineering College, Sector-28, Gandhinagar, Gujarat-382028</a>
             </div>
           </div>
-
-
         </div>
-
       </div>
     )
   }
