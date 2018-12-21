@@ -11,6 +11,48 @@
   width: 25vw;
 }
 
+
+.festnew-logo {
+  width: 100%;
+  padding-left: 4%;
+  padding-top: 8%;
+  display: none;
+}
+
+.foot-int {
+  width: 50%;
+  margin-left: 13%;
+  position: relative;
+  left: -6%;
+  top: 10px;
+  height: 100%;
+}
+
+.foot-fest-logo{
+  margin-left: 30%;
+  width:80%;
+}
+
+.foot-int-logo{
+  margin-left: 30%;
+  max-width: 130%;
+}
+
+.festpic {
+  width: 35%;
+  height: 100%;
+}
+
+.white-link {
+  color: antiquewhite;
+}
+
+.white-link:hover {
+  border-bottom: 1px dashed #FF6E2C;
+  text-decoration: none;
+  color: white;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -39,16 +81,24 @@
 }
 
 .single-icon {
-  size: 10px;
-  padding-left: 15px;
+  size: 0.5rem;
+  padding-right: 1rem;
   font-size: x-large;
   color: #FF6E2C;
+  padding-top:0px;
+}
+
+.single-icon:hover {
+  size: 1rem;
+  font-size: x-large;
+  color: whitesmoke;
   padding-top:0px;
 }
 
 .links-section a {
   text-decoration: none;
 }
+
 @media screen and (max-width: 560px) and (min-width: 320px) {
   .uk-card.uk-card-body.uk-margin-left {
     left:-1%;
@@ -61,8 +111,9 @@
   .fest-logo {
     width: 40vw;
     position: relative;
-   display: none;
+    display: none;
   }
+
   .icons {
     display: -ms-flexbox;
     display: flex;
@@ -70,43 +121,14 @@
     left: -5%;
     top: -5%;
   }
+
   .footer {
     display: flex;
     justify-content: center;
   }
+
   .festnew-logo {
     display: flex !important;
   }
 
 }
-
-.festnew-logo {
-  width: 100%;
-  padding-left: 4%;
-  padding-top: 8%;
-  display: none;
-
-}
-
-.foot-int {
-    width: 50%;
-    margin-left: 13%;
-    position: relative;
-    left: -6%;
-    top: 10px;
-    height: 100%;
-}
-
-.foot-fest-logo{
-  margin-left: 30%;
-  width:80%;
-}
-.foot-int-logo{
-  margin-left: 30%;
-  max-width:140%;
-}
-.festpic{
-  width: 35%;
-    height: 100%;
-}
-

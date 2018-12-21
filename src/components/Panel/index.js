@@ -35,7 +35,7 @@ class Panel extends React.Component {
     let isRegistered = this.props.user && _.some(Object.keys(this.props.event.participants), uid => uid === this.props.user.uid);
 
     return <div className={'uk-width-1-2@s uk-width-1-3@m uk-width-1-3@l'}>
-      <div className="uk-card uk-card-body event-panel">
+      <div className="uk-card uk-card-body uk-border-rounded event-panel">
         <div className={'panel-img-container'}>
           <img src={this.props.event.img || './fest-logo.png'} className={'uk-margin-bottom panel-img'} alt=""/>
         </div>
@@ -47,10 +47,11 @@ class Panel extends React.Component {
         <p className={'uk-text-left panel-content'}>{this.props.event.description}</p>
         <p className={'panel-buttons'}>
           {this.props.user && (isRegistered ?
-            <span className={'panel-unregister'}  onclick='return false;'>Unregister</span> :
-            <span className={'panel-register'}  onclick='return false;'>Register</span>)
+            <span className={'panel-unregister uk-border-pill'}  onclick='return false;'>Unregister</span> :
+            <span className={'panel-register uk-border-pill'}  onclick='return false;'>Register</span>)
           }
-          <span className={'panel-more'} onClick={this.navigateToEvent.bind(this)}>View Details</span>
+          <span className={'panel-more uk-border-pill'} onClick={this.navigateToEvent.bind(this)}>View Details</span>
+          {/* <a onClick={this.navigateToEvent.bind(this)} className={'uk-text-center uk-button uk-button-primary uk-margin-small uk-border-pill'}>View Details</a>   */}
         </p>
       </div>
     </div>
