@@ -34,10 +34,10 @@ class Panel extends React.Component {
 
     let isRegistered = this.props.user && _.some(Object.keys(this.props.event.participants), uid => uid === this.props.user.uid);
 
-    return <div className={'uk-width-1-2@s uk-width-1-3@m uk-width-1-3@l'}>
+    return <div className={''}>
       <div className="uk-card uk-card-body uk-border-rounded event-panel">
         <div className={'panel-img-container'}>
-          <img src={this.props.event.img || './fest-logo.png'} className={'uk-margin-bottom panel-img'} alt=""/>
+          <img src={this.props.event.img || './fest-logo.png'} className={'panel-img'} alt=""/>
         </div>
         <h3 className="uk-card-title white">{this.props.event.name}</h3>
         {/* <p className={'uk-text-left panel-team-size primary-color'}>TEAM SIZE: <b>{this.props.event['team-size']}</b>

@@ -1,23 +1,45 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {connect} from 'react-redux';
 
 import Panel from "../Panel";
 import './styles.css';
 
 class EventList extends React.Component {
+  render () {
+    let listEventsJsx = []
 
-  render() {
+    if (this.props.event) {
+      console.log('Helloooo')
+      let events = this.props.event.events
+      // let listEvents = []
+      // while (events.length !== 0) {
+      //   let arr = [...events.splice(0, 3)]
+      //   arr = arr.filter(a => a !== undefined)
+      //   listEvents.push(arr)
+      // }
+
+      // const listEventsLength = listEvents.length
+
+      listEventsJsx = events.map((event) => {
+        return (
+          <li className='uk-width-3-4' key={event.id}>
+            <Panel event={event}/>
+          </li>)
+      })
+    }
     return (
-      <div className={'uk-container event-list'}>
-        <div className={'uk-text-center uk-margin-large-bottom'}>
-          <span className={'event-list-heading'}>PAST</span>
-          {' '}
-          <span className={'event-list-heading'}>EVENTS</span>
+      <Fragment>
+        <div uk-slider="finite: true,autoplay: true, autoplay-interval: 1500ms" className="uk-light" style={{width:'100%'}}>
+          <ul className='uk-slider-items uk-grid'>
+            {listEventsJsx}
+          </ul>
+          <div className='uk-light'>
+            <a id='slider-arrow-left' uk-icon='icon: chevron-left; ratio: 2' class="uk-slidenav-medium uk-position-center-left" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a id='slider-arrow-right' uk-icon='icon: chevron-right; ratio: 2' class="uk-slidenav-medium uk-position-center-right" href="#" uk-slidenav-next uk-slider-item="next"></a>
+          </div>
+          <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
         </div>
-        <div uk-grid="true" className={'uk-grid-large uk-child-width-expand@s'}>
-          {this.props.event.events.map((event, idx) => <Panel key={idx} event={event}/>)}
-        </div>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -5,6 +5,10 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }
 
 .event-panel:hover {
@@ -17,7 +21,7 @@
 }
 
 .panel-content {
-  height: 9em;
+  height: 6em;
   overflow: hidden;
 }
 
@@ -35,9 +39,9 @@
 }
 
 .uk-card-title {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  height: 2.8em;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  height: 2.4em;
   overflow: hidden;
 }
 
@@ -78,7 +82,7 @@
 .panel-img-container {
   display: flex;
   justify-content: center;
-  height: 111px;
+  height: 91px;
 }
 
 .panel-img {

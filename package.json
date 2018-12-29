@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.10",
     "firebase": "^4.10.0",
     "firebaseui": "^2.6.1",
     "lodash": "^4.17.5",

@@ -107,6 +107,13 @@
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.6.tgz#a4b81ca8cdeb1acbc7923289a4a514f61b59db86"
 
+"@fullpage/react-fullpage@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.10.tgz#c7c15ea2cff8cd7f58b8ba3ac0e75d76ce3b83e1"
+  integrity sha512-VDgrIsmntMvHVo+p+UcO60UY3/pQfPDipqbY31uJK7CzeTslGY1TqIe/XPfzH1dDr3HgXvG2gPQMGOh07Xko/A==
+  dependencies:
+    fullpage.js "^3.0.4"
+
 "@types/lodash.clonedeep@^4.5.3":
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/@types/lodash.clonedeep/-/lodash.clonedeep-4.5.3.tgz#d42cfba3d929a4e1177a775142ce2a9444e384cf"
@@ -3116,6 +3123,11 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
     inherits "~2.0.0"
     mkdirp ">=0.5 0"
     rimraf "2"
+
+fullpage.js@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-3.0.4.tgz#bb3eb1af7ecb5706866abf64ffc7b2535cec39b7"
+  integrity sha512-GWpud0Gvr8i4k3QySoajFevO18UBKMJ9znU3o4uaXZkKYqLtS8d1BSQoAARmYwYgBLOw3YrKAG+4LoaIokO1UA==
 
 function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
