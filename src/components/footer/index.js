@@ -68,7 +68,7 @@ class Footer extends Component {
             </div>
             <div>
               <span className="primary-color">Email: </span>
-              <a href="mailto:cerebro.iiitv@gmail.com" className="white-link">cerebro.iiitv@gmail.com</a>
+              <a href="mailto:cerebro@iiitv.ac.in" className="white-link">cerebro@iiitv.ac.in</a>
             </div>
             <div>
               <span className="primary-color">Phone: </span>
