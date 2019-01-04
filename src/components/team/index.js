@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaFacebook, FaGithub, FaLinkedin, FaTwitter} from 'react-icons/lib/fa';
+import {FaFacebook, FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa';
 import "./team.css";
 
 class Team extends React.Component {

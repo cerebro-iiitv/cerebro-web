@@ -1,36 +1,50 @@
 {
   "name": "cerebro-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.10",
-    "firebase": "^4.10.0",
-    "firebaseui": "^2.6.1",
-    "lodash": "^4.17.5",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-icons": "^2.2.7",
-    "react-particles-js": "^2.1.0",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
-    "react-vertical-timeline-component": "^2.0.5",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
-    "uikit": "^3.0.0-rc.25"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerebro-iiitv/cerebro-web.git"
+  },
+  "author": "Cerebro Web Team",
+  "bugs": {
+    "url": "https://github.com/cerebro-iiitv/cerebro-web/issues"
+  },
+  "homepage": "https://github.com/cerebro-iiitv/cerebro-web#readme",
+  "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.10",
+    "firebase": "^5.7.2",
+    "firebaseui": "^3.5.1",
+    "lodash": "^4.17.11",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-icons": "^3.2.2",
+    "react-particles-js": "^2.4.2",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.2",
+    "react-vertical-timeline-component": "^2.3.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "uikit": "^3.0.0-rc.26"
+  },
   "devDependencies": {
-    "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

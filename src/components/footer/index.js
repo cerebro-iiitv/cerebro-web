@@ -6,7 +6,7 @@ import {
   FaGithub,
   FaInstagram,
   FaTwitter
-} from 'react-icons/lib/fa';
+} from 'react-icons/fa';
 
 import './styles.css';
 
