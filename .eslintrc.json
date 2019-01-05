@@ -1,0 +1,22 @@
+{
+	"parser": "babel-eslint",
+	"plugins": ["prettier", "react"],
+	"extends": ["prettier", "plugin:react/recommended"],
+	"rules": {
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
+		"react/jsx-no-bind": "error",
+		"react/require-default-props": "error",
+		"react/forbid-component-props": ["error", { "forbid": ["style"] }],
+		"react/forbid-dom-props": ["error", { "forbid": ["style"] }],
+		"react/no-danger": "error",
+		"react/no-this-in-sfc": "error",
+		"react/no-unused-prop-types": "warn",
+		"react/no-unused-state": "warn",
+		"react/react-in-jsx-scope": "error"
+	},
+	"settings": {
+		"react": {
+			"version": "^16.7.0"
+		}
+	}
+}
