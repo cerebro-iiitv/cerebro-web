@@ -6,6 +6,9 @@ class Team extends React.Component {
 	render() {
 		return (
 			<div className="team-section">
+				<h2 className="primary-color" style={{ marginTop: '30px' }}>
+					{this.props.team.name}
+				</h2>
 				<div uk-grid="true" className={'uk-grid-large uk-child-width-expand@s'}>
 					{this.props.team.members.map((member, idx) => (
 						<div
@@ -20,7 +23,7 @@ class Team extends React.Component {
 							/>
 							<div className={'uk-margin-top'}>{member.name}</div>
 							<div>
-								[ <span className={'primary-color'}>{this.props.team.name}</span> ]
+								[ <span className={'primary-color'}>{member.role}</span> ]
 							</div>
 							<div className={'uk-margin-left'}>
 								{member.links.github && (
