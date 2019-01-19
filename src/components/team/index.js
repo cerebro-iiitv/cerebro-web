@@ -12,14 +12,16 @@ class Team extends React.Component {
 				<div uk-grid="true" className={'uk-grid-large uk-child-width-expand@s'}>
 					{this.props.team.members.map((member, idx) => (
 						<div
-							className={'uk-width-1-3@s uk-width-1-4@m uk-width-1-5@l uk-margin-large-top uk-text-center'}
+							className={
+								'uk-width-1-3@s uk-width-1-4@m uk-width-1-5@l uk-margin-medium-top uk-margin-medium-bottom uk-text-center'
+							}
 							key={idx}
 						>
 							<img
-								src={member.img ? member.img : '/fest-logo.png'}
+								src={member.img ? member.img : '/favicon.ico'}
 								className={'uk-thumbnail uk-border-circle'}
 								alt={member.name}
-								style={{ width: '100%', overflow: 'hidden', backgroundSize: 'cover', backgroundPosition: 'center' }}
+								style={{ width: '80%', overflow: 'hidden', backgroundSize: 'cover', backgroundPosition: 'center' }}
 							/>
 							<div className={'uk-margin-top'}>{member.name}</div>
 							<div>
